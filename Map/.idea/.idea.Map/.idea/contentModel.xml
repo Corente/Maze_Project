@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Corentin\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_Map.1699631614.00" t="ExcludeRecursive" />
-    <e p="D:\Mes docs\Projets\Maze_Project\Map" t="IncludeRecursive">
+    <e p="C:\Users\Corentin\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_Map.-27472649.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Corentin\Desktop\Map" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="NewBehaviourScript.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public class Bloc
+public class Bloc 
 {
     public bool west, east, south, north, artefact;
     public bool type1, type2, type3;
@@ -26,8 +26,6 @@ public class Bloc
         type1 = false;
         type2 = false;
         type3 = false;
-        Rb = new Rigidbody();
-        
         Typed();
     }
 

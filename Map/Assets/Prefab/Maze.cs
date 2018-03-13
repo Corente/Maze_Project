@@ -10,7 +10,7 @@ public class Maze : MonoBehaviour
 {
 
 	public int width, height;
-	public VisualBloc visualprefabbloc;
+	public VisualBloc Visualprefabbloc;
 
 	public Bloc[,] grid;
 
@@ -33,7 +33,7 @@ public class Maze : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		PushSelection();
+		//PushSelection();
 		PushBloc();
 	}
 
@@ -82,7 +82,7 @@ public class Maze : MonoBehaviour
 	{
 		foreach (Bloc bloc in grid)
 		{
-			visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
+			visualBlocInit = Instantiate(Visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
 
 			while (bloc.rotate > 1)
 			{
@@ -99,7 +99,7 @@ public class Maze : MonoBehaviour
 		}
 	}
 	
-
+	
 	void PushSelection()
 	{
 		bool selected = false;
@@ -179,14 +179,14 @@ public class Maze : MonoBehaviour
 		//int direction = selection[2];
 		int i = 0;
 		int j = 3;
-		int direction = 1;
+		int direction = 3;
 		Bloc bloc = new Bloc();
 		
 		if (direction == 1)
 		{
 			Bloc tmp = grid[0, j];
 			Changebloc(j,i,bloc,grid,direction);
-			tmp.Rb.AddForce(0,0,50*Time.deltaTime);
+			tmp.Rb.AddForce(0,0,500000000*Time.deltaTime);
 			grid[0, j] = bloc;
 		}
 		else if (direction == 2)
@@ -216,7 +216,7 @@ public class Maze : MonoBehaviour
 	{
 		if (direction == 1)
 		{
-			for (int p = i; p <= 1; p--)
+			for (int p = i-1; p <= 1; p--)
 			{
 				map[p, j] = map[p - 1, j];
 			}

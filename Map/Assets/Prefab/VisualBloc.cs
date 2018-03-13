@@ -11,5 +11,6 @@ public class VisualBloc : MonoBehaviour
 	public Transform _One;
 	public Transform _Two;
 	public Transform _Three;
+	
 }
 
