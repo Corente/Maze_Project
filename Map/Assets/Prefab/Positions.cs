@@ -23,5 +23,7 @@ public class Postions
         this.bloc = bloc;
         this.direction = direction;
     }
+
     
+
 }

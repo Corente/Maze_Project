@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO.Compression;
+using System.Linq.Expressions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,10 +21,20 @@ public class Maze : MonoBehaviour
 	int[] selection = new int[3];
 	
 	
+	
+	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		grid = new Bloc[width,height];
 		Init();
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		PushSelection();
+		PushBloc();
 	}
 
 	void Init()
@@ -32,13 +43,12 @@ public class Maze : MonoBehaviour
 		{
 			for (int i = 0; i < height; i++)
 			{
-			grid[j,i] = new Bloc(/*false, false, false, false*/);
+				grid[j,i] = new Bloc(/*false, false, false, false*/);
 				grid[j, i].xpos = j;
 				grid[j, i].zpos = i;
 			}
 		}
 		Shuffle();
-		
 		InitVisual();
 	}
 
@@ -88,12 +98,7 @@ public class Maze : MonoBehaviour
 			visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
 		}
 	}
-	// Update is called once per frame
-	void Update () {
-		
-		PushSelection();
-		PushBloc();
-	}
+	
 
 	void PushSelection()
 	{
@@ -169,9 +174,77 @@ public class Maze : MonoBehaviour
 	
 	void PushBloc()
 	{
-		int i = selection[0];
-		int j = selection[1];
-		int direction = selection[2];
+		//int i = selection[0];
+		//int j = selection[1];
+		//int direction = selection[2];
+		int i = 0;
+		int j = 3;
+		int direction = 1;
+		Bloc bloc = new Bloc();
 		
+		if (direction == 1)
+		{
+			Bloc tmp = grid[0, j];
+			Changebloc(j,i,bloc,grid,direction);
+			tmp.Rb.AddForce(0,0,50*Time.deltaTime);
+			grid[0, j] = bloc;
+		}
+		else if (direction == 2)
+		{
+			Bloc tmp = grid[i, j];
+			Changebloc(j,i,bloc,grid,direction);
+			tmp.Rb.AddForce(-50*Time.deltaTime,0,0);
+			grid[i, j] = bloc;
+		}
+		else if (direction == 3)
+		{
+			Bloc tmp = grid[i, j];
+			Changebloc(j,i,bloc,grid,direction);
+			tmp.Rb.AddForce(0,0,-50*Time.deltaTime);
+			grid[i, j] = bloc;
+		}
+		else if (direction == 4)
+		{
+			Bloc tmp = grid[0, j];
+			Changebloc(j,i,bloc,grid,direction);
+			tmp.Rb.AddForce(50*Time.deltaTime,0,0);
+			grid[i, 0] = bloc;
+		}
+	}
+
+	void Changebloc(int j, int i, Bloc bloc, Bloc[,] map, int direction)
+	{
+		if (direction == 1)
+		{
+			for (int p = i; p <= 1; p--)
+			{
+				map[p, j] = map[p - 1, j];
+			}
+			//map[0, j] = bloc;
+		}
+		else if (direction == 2)
+		{
+			for (int p = j; p >= 1; p--)
+			{
+				map[i, p] = map[i, p - 1];
+			}
+			//map[i, j] = bloc;
+		}
+		else if (direction == 3)
+		{
+			for (int p = 1; p <= i - 1; p++)
+			{
+				map[p, j] = map[p + 1, j];
+			}
+			//map[i, j] = bloc;
+		}
+		else if (direction == 4)
+		{
+			for (int p = 1; p <= j - 1; p++)
+			{
+				map[i, p] = map[i, p + 1];
+			}
+			//map[i, 0] = bloc;
+		}
 	}
 }

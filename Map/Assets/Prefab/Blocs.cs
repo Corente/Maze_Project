@@ -10,10 +10,13 @@ public class Bloc
     private int type;
     public int rotate;
     public int xpos, zpos;
+    public Rigidbody Rb;
+    private Postions pos;
+    
     
     public Bloc ()
     {
-       west = false;
+        west = false;
         east = false;
         south = false;
         north = false;
@@ -23,6 +26,8 @@ public class Bloc
         type1 = false;
         type2 = false;
         type3 = false;
+        Rb = new Rigidbody();
+        
         Typed();
     }
 
