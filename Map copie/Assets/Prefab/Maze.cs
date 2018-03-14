@@ -50,7 +50,7 @@ public class Maze : MonoBehaviour
 				grid[j, i].zpos = i;
 			}
 		}
-		Shuffle();
+		//Shuffle();
 		
 		InitVisual();
 	}
