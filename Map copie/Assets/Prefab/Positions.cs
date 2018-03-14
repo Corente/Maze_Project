@@ -16,7 +16,7 @@ public class Postions
         East, 
         West
     }
-    private Direction direction;
+    public Direction direction;
 
     public Postions(Bloc bloc, Direction direction)
     {
