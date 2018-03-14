@@ -16,6 +16,7 @@ public class Bloc
     {
         type = Random.Range(1,4);
         rotate = Random.Range(1,4);
+        //rotate = 1;
         artefact = Random.Range(0,1) == 1;
         type1 = false;
         type2 = false;

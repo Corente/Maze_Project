@@ -32,8 +32,9 @@ public class Maze : MonoBehaviour
 	void Update ()
 	{
 		
-		VisualBloc bloc = carte[0, 0];
+		VisualBloc bloc = carte[1, 0];
 		bloc.transform.Translate(0,0,0.05f);
+		
 		//PushSelection();
 		PushBloc();
 		
@@ -102,10 +103,11 @@ public class Maze : MonoBehaviour
 				visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
 
 				carte[p, w] = visualBlocInit;
-				while (bloc.rotate > 1)
+				int t = 0;
+				while (t<bloc.rotate)
 				{
 					visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, -90, 0));
-					bloc.rotate--;
+					t++;
 				}
 				
 				visualBlocInit.transform.parent = transform;
@@ -202,39 +204,45 @@ public class Maze : MonoBehaviour
 	}
 
 
-
-	void PrePushBloc(int i, int j,int direction)
-	{
-		
-	}
-		
-	
-	
-	
-		void PushBloc()
+	void PushBloc()
 		{
 			//int i = selection[0];
 			//int j = selection[1];
 			//int direction = selection[2];
-			int i = 8;
-			int j = 3;
+			int i = 3;
+			int j = 8;
 			int direction = 1;
 			
 		
 			if (direction == 1)
 			{
+				for (int p = 0; p <= j; p++)
+				{
+					VisualBloc tmp = carte[i, p];
+					Bloc bloc = grid[i, p];
+					
+					if (bloc.rotate != direction)
+					{
+						if (bloc.rotate == 2)
+						{
+							tmp.transform.Translate(0, 0,5 * Time.deltaTime);
+						}
+						else if (bloc.rotate == 3)
+						{
+							tmp.transform.Translate( 5 * Time.deltaTime,0, 0);
+						}
+						else if (bloc.rotate == 4)
+						{
+							tmp.transform.Translate( 0, 0,-5 * Time.deltaTime);
+						}
+					}
+					else
+					{
+						tmp.transform.Translate(-5*Time.deltaTime,0,0);
+					}
+				}
 				//Bloc bloc = grid[0, j];
 				//Changebloc(j,i,bloc,grid,direction);
-				for (int p = 0; p <= i; p++)
-				{
-					VisualBloc tmp = carte[p, j];
-					Bloc bloc = grid[p, j];
-					
-					tmp.transform.Translate(0,0,5*Time.deltaTime);
-					
-					
-					
-				}
 				//grid[0, j] = PlayerBloc ;
 				//carte[o,j] = playerVisualBloc
 				
@@ -242,24 +250,106 @@ public class Maze : MonoBehaviour
 			}
 			else if (direction == 2)
 			{
-				Bloc bloc = grid[i, j];
-				Changebloc(j,i,bloc,grid,direction);
-				//tmp.Rb.AddForce(-50*Time.deltaTime,0,0);
-				grid[i, j] = bloc;
+				for (int p = i; p >= 0; p--)
+				{
+					Bloc bloc = grid[p, j];
+					VisualBloc tmp = carte[p, j];
+
+					if (bloc.rotate != direction)
+					{
+						if (bloc.rotate == 1)
+						{
+							tmp.transform.Translate(0, 0, 5 * Time.deltaTime);
+						}
+						else if (bloc.rotate == 3)
+						{
+							tmp.transform.Translate(0,0,-5*Time.deltaTime);
+						}
+						else if (bloc.rotate == 4)
+						{
+							tmp.transform.Translate(-5*Time.deltaTime,0,0);
+						}
+					}
+					else
+					{
+						tmp.transform.Translate(5*Time.deltaTime,0,0);
+					}
+					//Bloc bloc = grid[0, j];
+					//Changebloc(j,i,bloc,grid,direction);
+					//grid[0, j] = PlayerBloc ;
+					//carte[o,j] = playerVisualBloc
+				}
+				
+				
+				
+				
+				//Changebloc(j,i,bloc,grid,direction);
+				
+				//grid[i, j] = bloc;
 			}
 			else if (direction == 3)
 			{
-				Bloc bloc = grid[i, j];
-				Changebloc(j,i,bloc,grid,direction);
-				//tmp.Rb.AddForce(0,0,-50*Time.deltaTime);
-				grid[i, j] = bloc;
+				for (int p = j; p >= 0; p--)
+				{
+					VisualBloc tmp = carte[i, p];
+					Bloc bloc = grid[i, p];
+					
+					if (bloc.rotate != direction)
+					{
+						if (bloc.rotate == 2)
+						{
+							tmp.transform.Translate(0, 0,5 * Time.deltaTime);
+						}
+						else if (bloc.rotate == 1)
+						{
+							tmp.transform.Translate( -5 * Time.deltaTime,0, 0);
+						}
+						else if (bloc.rotate == 4)
+						{
+							tmp.transform.Translate( 0, 0,-5 * Time.deltaTime);
+						}
+					}
+					else
+					{
+						tmp.transform.Translate(5*Time.deltaTime,0,0);
+					}
+				}
+				//Bloc bloc = grid[0, j];
+				//Changebloc(j,i,bloc,grid,direction);
+				//grid[0, j] = PlayerBloc ;
+				//carte[o,j] = playerVisualBloc
 			}
 			else if (direction == 4)
 			{
-				Bloc bloc = grid[0, j];
-				Changebloc(j,i,bloc,grid,direction);
-				//tmp.Rb.AddForce(50*Time.deltaTime,0,0);
-				grid[i, 0] = bloc;
+				for (int p = 0; p <= i; p++)
+				{
+					VisualBloc tmp = carte[p, j];
+					Bloc bloc = grid[p, j];
+					
+					if (bloc.rotate != direction)
+					{
+						if (bloc.rotate == 2)
+						{
+							tmp.transform.Translate(-5 * Time.deltaTime,0,0);
+						}
+						else if (bloc.rotate == 3)
+						{
+							tmp.transform.Translate(0, 0,5 * Time.deltaTime);
+						}
+						else if (bloc.rotate == 1)
+						{
+							tmp.transform.Translate(0, 0, -5 * Time.deltaTime);
+						}
+					}
+					else
+					{
+						tmp.transform.Translate(5*Time.deltaTime,0,0);
+					}
+				}
+				//Bloc bloc = grid[0, j];
+				//Changebloc(j,i,bloc,grid,direction);
+				//grid[0, j] = PlayerBloc ;
+				//carte[o,j] = playerVisualBloc
 			}
 		}
 
@@ -271,7 +361,7 @@ public class Maze : MonoBehaviour
 			{
 				map[p, j] = map[p - 1, j];
 			}
-			//map[0, j] = bloc;
+			
 		}
 		else if (direction == 2)
 		{
@@ -279,7 +369,7 @@ public class Maze : MonoBehaviour
 			{
 				map[i, p] = map[i, p - 1];
 			}
-			//map[i, j] = bloc;
+			
 		}
 		else if (direction == 3)
 		{
@@ -287,7 +377,7 @@ public class Maze : MonoBehaviour
 			{
 				map[p, j] = map[p + 1, j];
 			}
-			//map[i, j] = bloc;
+			
 		}
 		else if (direction == 4)
 		{
@@ -295,7 +385,7 @@ public class Maze : MonoBehaviour
 			{
 				map[i, p] = map[i, p + 1];
 			}
-			//map[i, 0] = bloc;
+			
 		}
 	}
 
