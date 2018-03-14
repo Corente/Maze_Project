@@ -10,19 +10,18 @@ public class Bloc
     private int type;
     public int rotate;
     public int xpos, zpos;
+    public VisualBloc obj;
     
     public Bloc ()
     {
-       west = false;
-        east = false;
-        south = false;
-        north = false;
         type = Random.Range(1,4);
         rotate = Random.Range(1,4);
         artefact = Random.Range(0,1) == 1;
         type1 = false;
         type2 = false;
         type3 = false;
+       // obj = new VisualBloc();
+        
         Typed();
     }
 
