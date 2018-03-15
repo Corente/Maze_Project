@@ -31,7 +31,19 @@ public class MovePlayerSmooth : MonoBehaviour {
 				initialPosition = transform.position;
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.DownArrow) || hasToMoveD)
+		else if (Input.GetKeyDown(KeyCode.DownArrow))
+		{
+			transform.Rotate(0, 180, 0);
+		}
+		else if (Input.GetKeyDown(KeyCode.LeftArrow))
+		{
+			transform.Rotate(0, -90, 0);
+		}
+		else if (Input.GetKeyDown(KeyCode.RightArrow))
+		{
+			transform.Rotate(0, 90, 0);
+		}
+		/*else if (Input.GetKeyDown(KeyCode.DownArrow) || hasToMoveD)
 		{
 			if (Input.GetKeyDown(KeyCode.DownArrow))
 			{
@@ -69,6 +81,6 @@ public class MovePlayerSmooth : MonoBehaviour {
 			{
 				initialPosition = transform.position;
 			}
-		}
+		}*/
 	}
 }
