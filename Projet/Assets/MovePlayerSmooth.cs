@@ -25,7 +25,7 @@ public class MovePlayerSmooth : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
 		{
 			transform.Translate(0, 0, 0.1f);
-			hasToMoveU = transform.position.z < (initialPosition + new Vector3(0, 0, 10)).z;
+			hasToMoveU = transform.position.z < (initialPosition + new Vector3(0, 0, 1)).z;
 			if (!hasToMoveU)
 			{
 				initialPosition = transform.position;
