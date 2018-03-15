@@ -11,21 +11,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RotationNoSmooth.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RotationNoSmooth.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="561">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <marker date="1521130384105" expanded="false" signature="6:78" ph="..." />
+                <marker date="1521130384105" expanded="true" signature="126:701" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="176:183" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="238:699" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="282:324" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="372:448" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="496:572" ph="{...}" />
+                <marker date="1521130384105" expanded="true" signature="621:696" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovePlayerSmooth.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovePlayerSmooth.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+              <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
               <folding>
                 <marker date="1521128962508" expanded="false" signature="6:78" ph="..." />
                 <marker date="1521128962508" expanded="true" signature="126:2090" ph="{...}" />
@@ -52,6 +61,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+        <option value="$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
       </list>
     </option>
   </component>
@@ -81,6 +91,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -94,7 +105,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,11 +137,12 @@
       <updated>1521127719924</updated>
       <workItem from="1521127723964" duration="322000" />
       <workItem from="1521128884959" duration="250000" />
+      <workItem from="1521130339267" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="572000" />
+    <option name="totallyTimeSpent" value="832000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -179,11 +190,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <folding>
+            <marker date="1521128962508" expanded="false" signature="6:78" ph="..." />
+            <marker date="1521128962508" expanded="true" signature="126:2090" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="310:442" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="497:2088" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="555:754" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="698:750" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="802:842" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="890:930" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="979:1018" ph="{...}" />
+            <marker date="1521128962508" expanded="true" signature="1021:2085" ph="/* else if (Input.GetKeyDown(KeyCode.DownArrow) || hasToMoveD) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1521130384105" expanded="false" signature="6:78" ph="..." />
+            <marker date="1521130384105" expanded="true" signature="126:701" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="176:183" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="238:699" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="282:324" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="372:448" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="496:572" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="621:696" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521130384105" expanded="false" signature="6:78" ph="..." />
+            <marker date="1521130384105" expanded="true" signature="126:701" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="176:183" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="238:699" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="282:324" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="372:448" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="496:572" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="621:696" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -208,16 +264,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="561">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1521130384105" expanded="false" signature="6:78" ph="..." />
+            <marker date="1521130384105" expanded="true" signature="126:701" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="176:183" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="238:699" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="282:324" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="372:448" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="496:572" ph="{...}" />
+            <marker date="1521130384105" expanded="true" signature="621:696" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding>
             <marker date="1521128962508" expanded="false" signature="6:78" ph="..." />
             <marker date="1521128962508" expanded="true" signature="126:2090" ph="{...}" />
