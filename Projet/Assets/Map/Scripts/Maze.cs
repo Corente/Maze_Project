@@ -34,10 +34,10 @@ public class Maze : MonoBehaviour
 		player2 = new GameObject("player2");
 		player3 = new GameObject("player3");
 		player4 = new GameObject("player4");*/
-		player1.transform.position = carte[0, 0].transform.position + new Vector3(0,2,0);
-		player2.transform.position = carte[0, 8].transform.position + new Vector3(0,2,0);
-		player3.transform.position = carte[8, 0].transform.position + new Vector3(0,2,0);
-		player4.transform.position = carte[8, 8].transform.position + new Vector3(0,2,0);
+		player1.transform.position = carte[0, 0].transform.position + new Vector3(0,3,0);
+		player2.transform.position = carte[0, 8].transform.position + new Vector3(0,3,0);
+		player3.transform.position = carte[8, 0].transform.position + new Vector3(0,3,0);
+		player4.transform.position = carte[8, 8].transform.position + new Vector3(0,3,0);
 	}
 	
 	// Update is called once per frame

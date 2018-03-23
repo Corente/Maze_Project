@@ -27,7 +27,7 @@ public class MovePlayerSmooth : MonoBehaviour {
 			transform.Translate(0, 0, 0.1f);
 			i += 1;
 			hasToMoveU = true;
-			if ( i == 100)
+			if ( i == 200)
 			{
 				hasToMoveU = false;
 				i = 0;
@@ -39,14 +39,14 @@ public class MovePlayerSmooth : MonoBehaviour {
 			{
 				transform.Rotate(0, 180, 0);
 			}
-			hasToMoveD = true;
+			/*hasToMoveD = true;
 			transform.Translate(0, 0, 0.1f);
 			i += 1;
 			if (i == 100)
 			{
 				hasToMoveD = false;
 				i = 0;
-			}
+			}*/
 		}
 		else if (Input.GetKeyDown(KeyCode.LeftArrow) || hasToMoveL)
 		{
@@ -54,14 +54,14 @@ public class MovePlayerSmooth : MonoBehaviour {
 			{
 				transform.Rotate(0, -90, 0);
 			}
-			transform.Translate(0, 0, 0.1f);
+			/*transform.Translate(0, 0, 0.1f);
 			i += 1;
 			hasToMoveL = true;
 			if (i == 100)
 			{
 				hasToMoveL = false;
 				i = 0;
-			}
+			}*/
 		}
 		else if (Input.GetKeyDown(KeyCode.RightArrow) || hasToMoveR)
 		{
@@ -69,14 +69,14 @@ public class MovePlayerSmooth : MonoBehaviour {
 			{
 				transform.Rotate(0, 90, 0);
 			}
-			transform.Translate(0, 0, 0.1f);
+			/*transform.Translate(0, 0, 0.1f);
 			i += 1;
 			hasToMoveR = true;
 			if (i == 100)
 			{
 				i = 0;
 				hasToMoveR = false;
-			}
+			}*/
 		}
 	}
 }
