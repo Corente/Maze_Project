@@ -6,11 +6,15 @@ public class CameraFollow : MonoBehaviour
 {
 
 	public Transform player;
+	public bool TourDuJoueur;
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.position = player.position;
-		transform.rotation = player.rotation;
+		if (TourDuJoueur)
+		{
+			transform.position = player.position;
+			transform.rotation = player.rotation;
+		}
 	}
 }

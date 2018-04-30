@@ -6,6 +6,7 @@ using System.IO.Compression;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public class Maze : MonoBehaviour
@@ -30,6 +31,7 @@ public class Maze : MonoBehaviour
 
 	public InputField ligne;
 	public InputField direction;
+	private bool buton = false;
 	
 	
 	// Use this for initialization
@@ -50,12 +52,36 @@ public class Maze : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		dico(ligne.text,direction.text);
+		if (buton)
+		{
+			dico(ligne.text,direction.text);
+		}
 		//PushBloc(3,8,1);
-		
-
 	}
 
+	
+//######################################################################################################################################################################################
+//     AUTRES
+	
+	
+	
+	
+	public void clicked()
+	{
+		if (ligne.text.Length != 0 && direction.text.Length != 0)
+		{
+			buton = true;
+		}
+	}
+
+	
+	
+//#####################################################################################################################################################################################	
+//     FONCTIONS QUI CREER LA MAP	
+	
+	
+	
+	
 	void Init()
 	{
 		for (int j = 0; j < width; j++)
@@ -111,14 +137,15 @@ public class Maze : MonoBehaviour
 		
 	}
 	
+	
+//#############################################################################################################################################################################################
+//  FONCTIONS QUI POUSSE LES BLOCS
+	
 	void PushBloc(int i, int j, int direction)
 		{
 			//int i = selection[0];
 			//int j = selection[1];
 			//int direction = selection[2];
-			
-			
-		
 			if (direction == 1)
 			{
 				for (int p = 0; p <= j; p++)
@@ -260,10 +287,11 @@ public class Maze : MonoBehaviour
 	
 	public void dico(string colone, string direction)
 	{
-		char test = Convert.ToChar(colone);
+		char test = colone[0];
+		test = Char.ToLower(test);
 		if(test >= '0' && test <= '7')
 		{
-			int i = int.Parse(colone);
+			int i = test -48;
 			if (direction == "bas")
 			{
 				PushBloc(i, 8,1);
@@ -277,9 +305,9 @@ public class Maze : MonoBehaviour
 				Console.WriteLine("La direction n'est pas haut ou bas");
 			}
 		}
-		else if(test >= 'A' && test <= 'I')
+		else if(test >= 'a' && test <= 'i')
 		{
-			int j = int.Parse(colone);
+			int j = test -97;
 			if (direction == "gauche")
 			{
 				PushBloc(8,j,2);
