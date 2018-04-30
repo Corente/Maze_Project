@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.Compression;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Maze : MonoBehaviour
@@ -24,6 +27,10 @@ public class Maze : MonoBehaviour
 	public GameObject player2;
 	public GameObject player3;
 	public GameObject player4;
+
+	public InputField ligne;
+	public InputField direction;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -43,8 +50,8 @@ public class Maze : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		//PushSelection();
-		PushBloc();
+		dico(ligne.text,direction.text);
+		//PushBloc(3,8,1);
 		
 
 	}
@@ -60,45 +67,11 @@ public class Maze : MonoBehaviour
 				grid[j, i].zpos = i;
 			}
 		}
-		//Shuffle();
-		
 		InitVisual();
 		
 	}
 
-	void Shuffle()
-	{
-		for (int k = 0; k < 4*width*height; k++)
-		{
-			int i = Random.Range(0, width);
-			int j = Random.Range(0, height);
-
-			if (i % 2 == 1 || j % 2 == 1)
-			{
-				int i2 = Random.Range(0, width);
-				int j2 = Random.Range(0, height);
-
-				while (i2 % 2 == 0 && j2 % 2 == 0)
-				{
-					i2 = Random.Range(0, width);
-					j2 = Random.Range(0, height);
-				}
-
-				Bloc tmp = grid[i2, j2];
-				grid[i2, j2] = grid[i, j];
-				grid[i2, j2].xpos = i;
-				grid[i2, j2].zpos = j;
-				grid[i, j] = tmp;
-				grid[i, j].xpos = i2;
-				grid[i, j].zpos = j2;
-				
-				VisualBloc tmp2 = carte[i2, j2];
-				carte[i2, j2] = carte[i, j];
-				carte[i, j] = tmp2;
-				
-			}
-		}
-	}
+	
 
 	void InitVisual()
 	{
@@ -138,90 +111,12 @@ public class Maze : MonoBehaviour
 		
 	}
 	
-	
-	
-
-	void PushSelection()
-	{
-		bool selected = false;
-		int i = 0, j = 1;
-		selection[2] = 1;
-		while (!selected)
-		{
-			
-			if (Input.GetKeyDown("space"))
-			{
-				selection[0] = i;
-				selection[1] = j;
-				selected = true;
-			}
-			else
-			{
-				if (Input.GetKeyDown("up"))
-				{
-					if (i == 0)
-					{
-						j+=2;
-						selection[2] = 1;
-						if (j >= width)
-						{
-							i = 1;
-							j = width - 1;
-							selection[2] = 2;
-						}
-					}
-					
-					else if (j == width - 1)
-					{
-						i += 2;
-						selection[2] = 2;
-						if (i >= height)
-						{
-							selection[2] = 3;
-							i = height - 1;
-							j = width - 2;
-						}
-					}
-					else if (j == 0)
-					{
-						i -= 2;
-						selection[2] = 4;
-						if (i <= 0)
-						{
-							selection[2] = 1;
-							i = 0;
-							j = 1;
-						}
-					}
-					else
-					{
-						j -= 2;
-						selection[2] = 3;
-						if (j <= 0)
-						{
-							selection[2] = 4;
-							i = height - 2;
-							j = 0;
-						}
-					}
-				}
-				if (Input.GetKeyDown("down"))
-				{
-					//Do something
-				}
-			}
-		}
-	}
-
-
-	void PushBloc()
+	void PushBloc(int i, int j, int direction)
 		{
 			//int i = selection[0];
 			//int j = selection[1];
 			//int direction = selection[2];
-			int i = 3;
-			int j = 8;
-			int direction = 1;
+			
 			
 		
 			if (direction == 1)
@@ -308,20 +203,20 @@ public class Maze : MonoBehaviour
 					{
 						if (bloc.rotate == 2)
 						{
-							tmp.transform.Translate(0, 0,5 * Time.deltaTime);
+							tmp.transform.Translate(0, 0,-5 * Time.deltaTime);
 						}
 						else if (bloc.rotate == 1)
 						{
-							tmp.transform.Translate( -5 * Time.deltaTime,0, 0);
+							tmp.transform.Translate( 5 * Time.deltaTime,0, 0);
 						}
 						else if (bloc.rotate == 4)
 						{
-							tmp.transform.Translate( 0, 0,-5 * Time.deltaTime);
+							tmp.transform.Translate( 0, 0,5 * Time.deltaTime);
 						}
 					}
 					else
 					{
-						tmp.transform.Translate(5*Time.deltaTime,0,0);
+						tmp.transform.Translate(-5*Time.deltaTime,0,0);
 					}
 				}
 				//Bloc bloc = grid[0, j];
@@ -362,6 +257,47 @@ public class Maze : MonoBehaviour
 				//carte[o,j] = playerVisualBloc
 			}
 		}
+	
+	public void dico(string colone, string direction)
+	{
+		char test = Convert.ToChar(colone);
+		if(test >= '0' && test <= '7')
+		{
+			int i = int.Parse(colone);
+			if (direction == "bas")
+			{
+				PushBloc(i, 8,1);
+			}
+			else if (direction == "haut")
+			{
+				PushBloc(i, 8,3);
+			}
+			else
+			{
+				Console.WriteLine("La direction n'est pas haut ou bas");
+			}
+		}
+		else if(test >= 'A' && test <= 'I')
+		{
+			int j = int.Parse(colone);
+			if (direction == "gauche")
+			{
+				PushBloc(8,j,2);
+			}
+			else if (direction == "droite")
+			{
+				PushBloc(8,j,4);
+			}
+			else
+			{
+				Console.WriteLine("La direction n'est pas gauche ou droite");
+			}
+		}
+		else
+		{
+			Console.WriteLine("La colonne/ligne n'est pas comprise entre 0-7 / A-I");
+		}
+	}
 
 	void Changebloc(int j, int i, Bloc bloc, Bloc[,] map, int direction)
 	{
