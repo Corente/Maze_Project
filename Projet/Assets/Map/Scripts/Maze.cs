@@ -20,7 +20,7 @@ public class Maze : MonoBehaviour
 
 	private Vector2 _randomCellPos;
 
-	private VisualBloc visualBlocInit;
+	protected VisualBloc visualBlocInit;
 
 	int[] selection = new int[3];
 
@@ -31,7 +31,13 @@ public class Maze : MonoBehaviour
 
 	public InputField ligne;
 	public InputField direction;
-	private bool buton = false;
+	private string memoire_ligne;
+	private string memoire_direction;
+	
+	
+	private bool buton;
+
+	private int temps;
 	
 	
 	// Use this for initialization
@@ -52,11 +58,17 @@ public class Maze : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (temps == 240)
+		{
+			buton = false;
+			ajout_Bloc(memoire_ligne,memoire_direction);
+		}
 		if (buton)
 		{
-			dico(ligne.text,direction.text);
+			dico(memoire_ligne,memoire_direction);
+			temps++;
 		}
-		//PushBloc(3,8,1);
+		
 	}
 
 	
@@ -71,6 +83,9 @@ public class Maze : MonoBehaviour
 		if (ligne.text.Length != 0 && direction.text.Length != 0)
 		{
 			buton = true;
+			memoire_direction = direction.text;
+			memoire_ligne = ligne.text;
+			temps = 0;
 		}
 	}
 
@@ -88,7 +103,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int i = 0; i < height; i++)
 			{
-				grid[j,i] = new Bloc(/*false, false, false, false*/);
+				grid[j,i] = new Bloc();
 				grid[j, i].xpos = j;
 				grid[j, i].zpos = i;
 			}
@@ -126,8 +141,6 @@ public class Maze : MonoBehaviour
 				visualBlocInit._West.gameObject.SetActive(!bloc.type1 && !bloc.type2 && !bloc.type3);
 				visualBlocInit._Est.gameObject.SetActive(!bloc.type1 && !bloc.type2);
 				visualBlocInit._South.gameObject.SetActive(!bloc.type2 && !bloc.type3);
-				//visualBlocInit._dWest.gameObject.SetActive(!bloc.west);
-
 				visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
 
 				
@@ -143,9 +156,6 @@ public class Maze : MonoBehaviour
 	
 	void PushBloc(int i, int j, int direction)
 		{
-			//int i = selection[0];
-			//int j = selection[1];
-			//int direction = selection[2];
 			if (direction == 1)
 			{
 				for (int p = 0; p <= j; p++)
@@ -173,11 +183,7 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(-5*Time.deltaTime,0,0);
 					}
 				}
-				//Bloc bloc = grid[0, j];
-				//Changebloc(j,i,bloc,grid,direction);
-				//grid[0, j] = PlayerBloc ;
-				//carte[o,j] = playerVisualBloc
-				
+				//Changebloc(j,i,1);
 				
 			}
 			else if (direction == 2)
@@ -206,18 +212,9 @@ public class Maze : MonoBehaviour
 					{
 						tmp.transform.Translate(5*Time.deltaTime,0,0);
 					}
-					//Bloc bloc = grid[0, j];
-					//Changebloc(j,i,bloc,grid,direction);
-					//grid[0, j] = PlayerBloc ;
-					//carte[o,j] = playerVisualBloc
 				}
+				//Changebloc(j,i,2);
 				
-				
-				
-				
-				//Changebloc(j,i,bloc,grid,direction);
-				
-				//grid[i, j] = bloc;
 			}
 			else if (direction == 3)
 			{
@@ -246,10 +243,8 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(-5*Time.deltaTime,0,0);
 					}
 				}
-				//Bloc bloc = grid[0, j];
-				//Changebloc(j,i,bloc,grid,direction);
-				//grid[0, j] = PlayerBloc ;
-				//carte[o,j] = playerVisualBloc
+				//Changebloc(j,i,3);
+				
 			}
 			else if (direction == 4)
 			{
@@ -278,10 +273,7 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(5*Time.deltaTime,0,0);
 					}
 				}
-				//Bloc bloc = grid[0, j];
-				//Changebloc(j,i,bloc,grid,direction);
-				//grid[0, j] = PlayerBloc ;
-				//carte[o,j] = playerVisualBloc
+				//Changebloc(j,i,4);
 			}
 		}
 	
@@ -327,41 +319,104 @@ public class Maze : MonoBehaviour
 		}
 	}
 
-	void Changebloc(int j, int i, Bloc bloc, Bloc[,] map, int direction)
+	void Changebloc(int j, int i, int direction)
 	{
 		if (direction == 1)
 		{
-			for (int p = i - 1; p <= 1; p--)
+			for (int p = j - 1; p <= 1; p--)
 			{
-				map[p, j] = map[p - 1, j];
+				grid[i, p] = grid[i, p - 1];
 			}
+			
 			
 		}
 		else if (direction == 2)
 		{
-			for (int p = j; p >= 1; p--)
+			for (int p = 0; p <= j - 1; p++)
 			{
-				map[i, p] = map[i, p - 1];
+				grid[i, p] = grid[i, p + 1];
 			}
+			
 			
 		}
 		else if (direction == 3)
 		{
-			for (int p = 1; p <= i - 1; p++)
+			for (int p = 1; p <= i-1; p++)
 			{
-				map[p, j] = map[p + 1, j];
+				grid[p,j] = grid[p+1,j];
 			}
 			
 		}
 		else if (direction == 4)
 		{
-			for (int p = 1; p <= j - 1; p++)
+			for (int p = j; p >= 1; p--)
 			{
-				map[i, p] = map[i, p + 1];
+				grid[i, p] = grid[i, p - 1];
 			}
 			
 		}
 	}
+	
+//##################################################################################################################################################################################
+//               BLOCS DES JOUEURS
 
+	void creation(int i, int j)
+	{
+		/*grid[i,j] = new Bloc();
+		grid[j, i].xpos = j;
+		grid[j, i].zpos = i;*/
+		Bloc bloc = grid[i, j];
+				
+		visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
+
+		carte[i, j] = visualBlocInit;
+		int t = 0;
+		while (t<bloc.rotate)
+		{
+			visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, -90, 0));
+			t++;
+		}
+				
+		visualBlocInit.transform.parent = transform;
+		visualBlocInit._One.gameObject.SetActive(bloc.type1);
+		visualBlocInit._Two.gameObject.SetActive(bloc.type2);
+		visualBlocInit._Three.gameObject.SetActive(bloc.type3);
+		visualBlocInit._West.gameObject.SetActive(!bloc.type1 && !bloc.type2 && !bloc.type3);
+		visualBlocInit._Est.gameObject.SetActive(!bloc.type1 && !bloc.type2);
+		visualBlocInit._South.gameObject.SetActive(!bloc.type2 && !bloc.type3);
+		visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+	}
+	
+	
+
+	void ajout_Bloc(string colone, string direction)
+	{
+		char test = colone[0];
+		test = Char.ToLower(test);
+		if (test >= '0' && test <= '7')
+		{
+			int i = test - 48;
+			if (direction == "bas")
+			{
+				creation(i,0);
+			}
+			else if (direction == "haut")
+			{
+				creation(i,8);
+			}
+		}
+		else if (test >= 'a' && test <= 'i')
+		{
+			int j = test - 97;
+			if (direction == "gauche")
+			{
+				creation(8,j);
+			}
+			else if (direction == "droite")
+			{
+				creation(0,j);
+			}
+		}
+	}
 
 }

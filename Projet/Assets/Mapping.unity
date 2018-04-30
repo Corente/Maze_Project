@@ -283,7 +283,7 @@ Transform:
   m_Children:
   - {fileID: 2094522370}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &66833669
 Camera:
@@ -583,7 +583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 87.84701, y: 0, z: 0}
 --- !u!114 &277514083
 MonoBehaviour:
@@ -1120,6 +1120,7 @@ GameObject:
   - component: {fileID: 661029389}
   - component: {fileID: 661029386}
   - component: {fileID: 661029390}
+  - component: {fileID: 661029391}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1139,7 +1140,7 @@ Transform:
   m_Children:
   - {fileID: 880954781}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &661029386
 MonoBehaviour:
@@ -1231,6 +1232,17 @@ MonoBehaviour:
   hasToMoveL: 0
   hasToMoveR: 0
   i: 0
+--- !u!114 &661029391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661029384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1642cc463a1b30341820054df5e09ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &690091632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1858,7 @@ Transform:
   m_Children:
   - {fileID: 1044713838}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1181944276
 Camera:
@@ -2399,13 +2411,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1427711485}
   m_TextComponent: {fileID: 1786150369}
   m_Placeholder: {fileID: 1312426009}
-  m_ContentType: 0
+  m_ContentType: 4
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 1
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 3
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -2883,7 +2895,7 @@ Transform:
   m_Children:
   - {fileID: 1924841829}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1895473170
 Camera:
