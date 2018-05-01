@@ -19,7 +19,7 @@ public class Maze : MonoBehaviour
 	public GameObject BlocL;
 	public GameObject BlocI;
 
-	public  Bloc[,] grid;
+	private Bloc[,] grid;
 	
 
 	private Vector2 _randomCellPos;
@@ -386,7 +386,7 @@ public class Maze : MonoBehaviour
 		visualBlocInit.transform.parent = transform;
 		visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
 		
-		grid[i, j].obj = visualBlocInit;
+		grid[i,j].obj = visualBlocInit;
 	}
 	
 	
@@ -454,14 +454,13 @@ public class Maze : MonoBehaviour
 		}
 	}
 	
-	void Changebloc(int j, int i, int direction)
+	void Changebloc(int i, int j, int direction)
 	{
-		Bloc[,] tmp = CloneGrid(grid);
 		if (direction == 1)
 		{
 			for (int p = j ; p >= 1; p--)
 			{
-				tmp[i, p] = grid[i, p - 1];
+				grid[i, p] = grid[i, p - 1];
 			}
 			
 			
@@ -470,7 +469,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = 0; p < i ; p++)
 			{
-				tmp[p,j] = grid[p+1,j];
+				grid[p,j] = grid[p+1,j];
 			}
 			
 			
@@ -479,7 +478,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = j; p >= 1; p++)
 			{
-				tmp[i,p] = grid[i,p-1];
+				grid[i,p] = grid[i,p-1];
 			}
 			
 		}
@@ -487,23 +486,9 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = i; p >= 1; p--)
 			{
-				tmp[p,j] = grid[p - 1,j];
+		    	grid[p,j] = grid[p - 1,j];
 			}
 		}
-		grid = CloneGrid(tmp);
-	}
-
-	Bloc[,] CloneGrid(Bloc[,] Grid)
-	{
-		Bloc[,] ret = new Bloc[width,height];
-		for (int i = 0; i < Grid.GetLength(0); i++)
-		{
-			for (int j = 0; j < Grid.GetLength(1); j++)
-			{
-				ret[j, i] = Grid[j, i];
-			}
-		}
-		return ret;
 	}
 	
 //############################################################################################################################################################################

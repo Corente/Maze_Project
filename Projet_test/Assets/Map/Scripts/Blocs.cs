@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Bloc
 {
-    public bool west, east, south, north, artefact;
+    public bool artefact;
     public string type;
     public int rotate;
     public int xpos, zpos;
