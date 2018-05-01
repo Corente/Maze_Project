@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VisualBloc : MonoBehaviour
 {
+	
 	public Transform _Est;
 	public Transform _West;
 	//public Transform _North;

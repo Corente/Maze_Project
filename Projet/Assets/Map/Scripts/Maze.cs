@@ -62,6 +62,9 @@ public class Maze : MonoBehaviour
 		{
 			buton = false;
 			ajout_Bloc(memoire_ligne,memoire_direction);
+			MajBloc(memoire_ligne,memoire_direction);
+			detruire(memoire_ligne, memoire_direction);
+			temps = 0;
 		}
 		if (buton)
 		{
@@ -183,8 +186,6 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(-5*Time.deltaTime,0,0);
 					}
 				}
-				//Changebloc(j,i,1);
-				
 			}
 			else if (direction == 2)
 			{
@@ -213,8 +214,6 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(5*Time.deltaTime,0,0);
 					}
 				}
-				//Changebloc(j,i,2);
-				
 			}
 			else if (direction == 3)
 			{
@@ -243,8 +242,6 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(-5*Time.deltaTime,0,0);
 					}
 				}
-				//Changebloc(j,i,3);
-				
 			}
 			else if (direction == 4)
 			{
@@ -273,7 +270,6 @@ public class Maze : MonoBehaviour
 						tmp.transform.Translate(5*Time.deltaTime,0,0);
 					}
 				}
-				//Changebloc(j,i,4);
 			}
 		}
 	
@@ -323,7 +319,7 @@ public class Maze : MonoBehaviour
 	{
 		if (direction == 1)
 		{
-			for (int p = j - 1; p <= 1; p--)
+			for (int p = j ; p >= 1; p--)
 			{
 				grid[i, p] = grid[i, p - 1];
 			}
@@ -332,26 +328,26 @@ public class Maze : MonoBehaviour
 		}
 		else if (direction == 2)
 		{
-			for (int p = 0; p <= j - 1; p++)
+			for (int p = 0; p < i ; p++)
 			{
-				grid[i, p] = grid[i, p + 1];
+				grid[p,j] = grid[p+1,j];
 			}
 			
 			
 		}
 		else if (direction == 3)
 		{
-			for (int p = 1; p <= i-1; p++)
+			for (int p = j; p >= 1; p++)
 			{
-				grid[p,j] = grid[p+1,j];
+				grid[i,p] = grid[i,p-1];
 			}
 			
 		}
 		else if (direction == 4)
 		{
-			for (int p = j; p >= 1; p--)
+			for (int p = i; p >= 1; p--)
 			{
-				grid[i, p] = grid[i, p - 1];
+				grid[p,j] = grid[p - 1,j];
 			}
 			
 		}
@@ -417,6 +413,79 @@ public class Maze : MonoBehaviour
 				creation(0,j);
 			}
 		}
+	}
+	
+	
+	
+	public void MajBloc(string colone, string direction)
+	{
+		char test = colone[0];
+		test = Char.ToLower(test);
+		if(test >= '0' && test <= '7')
+		{
+			int i = test -48;
+			if (direction == "bas")
+			{
+				 Changebloc(i, 8,1);
+			}
+			else if (direction == "haut")
+			{
+				Changebloc(i, 8,3);
+			}
+		}
+		else if (test >= 'a' && test <= 'i')
+		{
+			int j = test - 97;
+			if (direction == "gauche")
+			{
+				Changebloc(8, j, 2);
+			}
+			else if (direction == "droite")
+			{
+				Changebloc(8, j, 4);
+			}
+		}
+	}
+	
+//############################################################################################################################################################################
+//                         DESTRUCTION DE BLOCS
+
+	void detruire(string colone, string direction)
+	{
+		char test = colone[0];
+		test = Char.ToLower(test);
+		if(test >= '0' && test <= '7')
+		{
+			int i = test -48;
+			if (direction == "bas")
+			{
+				VisualBloc tmp = carte[i, 8];
+				tmp.enabled = false;
+			}
+			else if (direction == "haut")
+			{
+				
+				VisualBloc tmp = carte[i, 0];
+				tmp.enabled = false;
+			}
+		}
+		else if (test >= 'a' && test <= 'i')
+		{
+			int j = test - 97;
+			if (direction == "gauche")
+			{
+				VisualBloc tmp = carte[0,j];
+				tmp.enabled = false;
+			}
+			else if (direction == "droite")
+			{
+				VisualBloc tmp = carte[8, j];
+				tmp.enabled = false;
+			}
+		}
+		
+		
+		
 	}
 
 }
