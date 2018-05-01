@@ -13,16 +13,18 @@ public class Maze : MonoBehaviour
 {
 
 	public int width, height;
-	public VisualBloc visualprefabbloc;
+	
 
-	public Bloc[,] grid;
-	public VisualBloc[,] carte;
+	public GameObject BlocT;
+	public GameObject BlocL;
+	public GameObject BlocI;
+
+	private Bloc[,] grid;
+	
 
 	private Vector2 _randomCellPos;
 
-	protected VisualBloc visualBlocInit;
-
-	int[] selection = new int[3];
+	protected GameObject visualBlocInit;
 
 	public GameObject player1;
 	public GameObject player2;
@@ -43,16 +45,11 @@ public class Maze : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		grid = new Bloc[width,height];
-		carte = new VisualBloc[width,height];
 		Init();
-		/*player1 = new GameObject("player1");
-		player2 = new GameObject("player2");
-		player3 = new GameObject("player3");
-		player4 = new GameObject("player4");*/
-		player1.transform.position = carte[0, 0].transform.position + new Vector3(0,3,0);
-		player2.transform.position = carte[0, 8].transform.position + new Vector3(0,3,0);
-		player3.transform.position = carte[8, 0].transform.position + new Vector3(0,3,0);
-		player4.transform.position = carte[8, 8].transform.position + new Vector3(0,3,0);
+		player1.transform.position = grid[0, 0].obj.transform.position + new Vector3(0,3,0);
+		player2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
+		player3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
+		player4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
 	}
 	
 	// Update is called once per frame
@@ -61,9 +58,11 @@ public class Maze : MonoBehaviour
 		if (temps == 240)
 		{
 			buton = false;
-			ajout_Bloc(memoire_ligne,memoire_direction);
-			MajBloc(memoire_ligne,memoire_direction);
+			printGrid();
 			detruire(memoire_ligne, memoire_direction);
+			MajBloc(memoire_ligne,memoire_direction);
+			ajout_Bloc(memoire_ligne,memoire_direction);
+			printGrid();
 			temps = 0;
 		}
 		if (buton)
@@ -90,6 +89,20 @@ public class Maze : MonoBehaviour
 			memoire_ligne = ligne.text;
 			temps = 0;
 		}
+	}
+
+	public void printGrid()
+	{
+		string ret = "";
+		for (int i = 0; i < grid.GetLength(0); i++)
+		{
+			for (int j = 0; j < grid.GetLength(1); j++)
+			{
+				ret = ret + grid[j,i].type + ",";
+			}
+			ret = ret + "\n";
+		}
+		Debug.Log(ret);
 	}
 
 	
@@ -120,16 +133,34 @@ public class Maze : MonoBehaviour
 	void InitVisual()
 	{
 		
-		for (int p = 0; p < carte.GetLength(0); p++)
+		for (int p = 0; p < grid.GetLength(0); p++)
 		{
-			for (int w = 0; w < carte.GetLongLength(1); w++)
+			for (int w = 0; w < grid.GetLongLength(1); w++)
 			{
-
 				Bloc bloc = grid[p, w];
-				
-				visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
 
-				carte[p, w] = visualBlocInit;
+				GameObject visualprefabbloc;
+				int rd = Random.Range(1,4);
+				if (rd == 1)
+				{
+					visualprefabbloc = BlocI;
+					bloc.type = "I";
+				}
+				else if (rd == 2)
+				{
+					visualprefabbloc = BlocL;
+					bloc.type = "L";
+				}
+				else
+				{
+					visualprefabbloc = BlocT;
+					bloc.type = "T";
+				}
+				
+				
+				visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
+				
+				
 				int t = 0;
 				while (t<bloc.rotate)
 				{
@@ -138,15 +169,11 @@ public class Maze : MonoBehaviour
 				}
 				
 				visualBlocInit.transform.parent = transform;
-				visualBlocInit._One.gameObject.SetActive(bloc.type1);
-				visualBlocInit._Two.gameObject.SetActive(bloc.type2);
-				visualBlocInit._Three.gameObject.SetActive(bloc.type3);
-				visualBlocInit._West.gameObject.SetActive(!bloc.type1 && !bloc.type2 && !bloc.type3);
-				visualBlocInit._Est.gameObject.SetActive(!bloc.type1 && !bloc.type2);
-				visualBlocInit._South.gameObject.SetActive(!bloc.type2 && !bloc.type3);
 				visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
 
-				
+				bloc.obj = visualBlocInit;
+
+
 			}
 		}
 			
@@ -163,7 +190,7 @@ public class Maze : MonoBehaviour
 			{
 				for (int p = 0; p <= j; p++)
 				{
-					VisualBloc tmp = carte[i, p];
+					GameObject tmp = grid[i, p].obj;
 					Bloc bloc = grid[i, p];
 					
 					if (bloc.rotate != direction)
@@ -192,7 +219,7 @@ public class Maze : MonoBehaviour
 				for (int p = i; p >= 0; p--)
 				{
 					Bloc bloc = grid[p, j];
-					VisualBloc tmp = carte[p, j];
+					GameObject tmp = grid[p, j].obj;
 
 					if (bloc.rotate != direction)
 					{
@@ -217,9 +244,9 @@ public class Maze : MonoBehaviour
 			}
 			else if (direction == 3)
 			{
-				for (int p = j; p >= 0; p--)
+				for (int p = j ; p >= 0; p--)
 				{
-					VisualBloc tmp = carte[i, p];
+					GameObject tmp = grid[i, p].obj;
 					Bloc bloc = grid[i, p];
 					
 					if (bloc.rotate != direction)
@@ -247,7 +274,7 @@ public class Maze : MonoBehaviour
 			{
 				for (int p = 0; p <= i; p++)
 				{
-					VisualBloc tmp = carte[p, j];
+					GameObject tmp = grid[p, j].obj;
 					Bloc bloc = grid[p, j];
 					
 					if (bloc.rotate != direction)
@@ -272,12 +299,12 @@ public class Maze : MonoBehaviour
 				}
 			}
 		}
-	
+
 	public void dico(string colone, string direction)
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
@@ -315,57 +342,36 @@ public class Maze : MonoBehaviour
 		}
 	}
 
-	void Changebloc(int j, int i, int direction)
-	{
-		if (direction == 1)
-		{
-			for (int p = j ; p >= 1; p--)
-			{
-				grid[i, p] = grid[i, p - 1];
-			}
-			
-			
-		}
-		else if (direction == 2)
-		{
-			for (int p = 0; p < i ; p++)
-			{
-				grid[p,j] = grid[p+1,j];
-			}
-			
-			
-		}
-		else if (direction == 3)
-		{
-			for (int p = j; p >= 1; p++)
-			{
-				grid[i,p] = grid[i,p-1];
-			}
-			
-		}
-		else if (direction == 4)
-		{
-			for (int p = i; p >= 1; p--)
-			{
-				grid[p,j] = grid[p - 1,j];
-			}
-			
-		}
-	}
+	
 	
 //##################################################################################################################################################################################
 //               BLOCS DES JOUEURS
 
 	void creation(int i, int j)
 	{
-		/*grid[i,j] = new Bloc();
-		grid[j, i].xpos = j;
-		grid[j, i].zpos = i;*/
 		Bloc bloc = grid[i, j];
+		GameObject visualprefabbloc;
+		
+		int rd = Random.Range(1,4);
+		if (rd == 1)
+		{
+			visualprefabbloc = BlocI;
+			bloc.type = "I";
+		}
+		else if (rd == 2)
+		{
+			visualprefabbloc = BlocL;
+			bloc.type = "L";
+		}
+		else
+		{
+			visualprefabbloc = BlocT;
+			bloc.type = "T";
+		}
 				
-		visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as VisualBloc;
+		visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
 
-		carte[i, j] = visualBlocInit;
+		
 		int t = 0;
 		while (t<bloc.rotate)
 		{
@@ -374,13 +380,9 @@ public class Maze : MonoBehaviour
 		}
 				
 		visualBlocInit.transform.parent = transform;
-		visualBlocInit._One.gameObject.SetActive(bloc.type1);
-		visualBlocInit._Two.gameObject.SetActive(bloc.type2);
-		visualBlocInit._Three.gameObject.SetActive(bloc.type3);
-		visualBlocInit._West.gameObject.SetActive(!bloc.type1 && !bloc.type2 && !bloc.type3);
-		visualBlocInit._Est.gameObject.SetActive(!bloc.type1 && !bloc.type2);
-		visualBlocInit._South.gameObject.SetActive(!bloc.type2 && !bloc.type3);
 		visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+		
+		grid[i,j].obj = visualBlocInit;
 	}
 	
 	
@@ -389,7 +391,7 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if (test >= '0' && test <= '7')
+		if (test >= '0' && test <= '8')
 		{
 			int i = test - 48;
 			if (direction == "bas")
@@ -415,13 +417,14 @@ public class Maze : MonoBehaviour
 		}
 	}
 	
-	
+//###########################################################################################################################################################################
+// 								MAJ DE LA MAP
 	
 	public void MajBloc(string colone, string direction)
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
@@ -447,6 +450,39 @@ public class Maze : MonoBehaviour
 		}
 	}
 	
+	void Changebloc(int i, int j, int direction)
+	{
+		if (direction == 1)
+		{
+			for (int p = j ; p > 0; p--)
+			{
+				grid[i, p] = grid[i, p - 1];
+			}
+		}
+		else if (direction == 2)
+		{
+			for (int p = 0; p < i ; p++)
+			{
+				grid[p,j] = grid[p+1,j];
+			}
+		}
+		else if (direction == 3)
+		{
+			for (int p = 0; p < j; p++)
+			{
+				grid[i,p] = grid[i,p+1];
+			}
+			
+		}
+		else if (direction == 4)
+		{
+			for (int p = i; p > 0; p--)
+			{
+		    	grid[p,j] = grid[p - 1,j];
+			}
+		}
+	}
+	
 //############################################################################################################################################################################
 //                         DESTRUCTION DE BLOCS
 
@@ -454,19 +490,16 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
 			{
-				VisualBloc tmp = carte[i, 8];
-				tmp.enabled = false;
+				Destroy(grid[i,8].obj);
 			}
 			else if (direction == "haut")
 			{
-				
-				VisualBloc tmp = carte[i, 0];
-				tmp.enabled = false;
+				Destroy(grid[i,0].obj);
 			}
 		}
 		else if (test >= 'a' && test <= 'i')
@@ -474,18 +507,17 @@ public class Maze : MonoBehaviour
 			int j = test - 97;
 			if (direction == "gauche")
 			{
-				VisualBloc tmp = carte[0,j];
-				tmp.enabled = false;
+				Destroy(grid[0,j].obj);
 			}
 			else if (direction == "droite")
 			{
-				VisualBloc tmp = carte[8, j];
-				tmp.enabled = false;
+				Destroy(grid[8,j].obj);
 			}
 		}
-		
-		
-		
 	}
-
+		
+		
+		
 }
+
+

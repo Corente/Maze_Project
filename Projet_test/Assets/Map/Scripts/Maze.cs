@@ -46,10 +46,6 @@ public class Maze : MonoBehaviour
 	void Start () {
 		grid = new Bloc[width,height];
 		Init();
-		/*player1 = new GameObject("player1");
-		player2 = new GameObject("player2");
-		player3 = new GameObject("player3");
-		player4 = new GameObject("player4");*/
 		player1.transform.position = grid[0, 0].obj.transform.position + new Vector3(0,3,0);
 		player2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
 		player3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
@@ -248,7 +244,7 @@ public class Maze : MonoBehaviour
 			}
 			else if (direction == 3)
 			{
-				for (int p = j; p >= 0; p--)
+				for (int p = j ; p >= 0; p--)
 				{
 					GameObject tmp = grid[i, p].obj;
 					Bloc bloc = grid[i, p];
@@ -462,8 +458,6 @@ public class Maze : MonoBehaviour
 			{
 				grid[i, p] = grid[i, p - 1];
 			}
-			
-			
 		}
 		else if (direction == 2)
 		{
