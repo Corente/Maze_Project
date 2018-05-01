@@ -19,14 +19,12 @@ public class Maze : MonoBehaviour
 	public GameObject BlocL;
 	public GameObject BlocI;
 
-	public Bloc[,] grid;
+	public  Bloc[,] grid;
 	
 
 	private Vector2 _randomCellPos;
 
 	protected GameObject visualBlocInit;
-
-	int[] selection = new int[3];
 
 	public GameObject player1;
 	public GameObject player2;
@@ -47,7 +45,6 @@ public class Maze : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		grid = new Bloc[width,height];
-		
 		Init();
 		/*player1 = new GameObject("player1");
 		player2 = new GameObject("player2");
@@ -70,12 +67,11 @@ public class Maze : MonoBehaviour
 			MajBloc(memoire_ligne,memoire_direction);
 			printGrid();
 			ajout_Bloc(memoire_ligne,memoire_direction);
-			
-			
 			temps = 0;
 		}
 		if (buton)
 		{
+			printGrid();
 			dico(memoire_ligne,memoire_direction);
 			temps++;
 		}
@@ -107,7 +103,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int j = 0; j < grid.GetLength(1); j++)
 			{
-				ret = ret + grid[i, j].type + ",";
+				ret = ret + grid[j,i].type + ",";
 			}
 			ret = ret + "\n";
 		}
@@ -460,11 +456,12 @@ public class Maze : MonoBehaviour
 	
 	void Changebloc(int j, int i, int direction)
 	{
+		Bloc[,] tmp = CloneGrid(grid);
 		if (direction == 1)
 		{
 			for (int p = j ; p >= 1; p--)
 			{
-				grid[i, p] = grid[i, p - 1];
+				tmp[i, p] = grid[i, p - 1];
 			}
 			
 			
@@ -473,7 +470,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = 0; p < i ; p++)
 			{
-				grid[p,j] = grid[p+1,j];
+				tmp[p,j] = grid[p+1,j];
 			}
 			
 			
@@ -482,7 +479,7 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = j; p >= 1; p++)
 			{
-				grid[i,p] = grid[i,p-1];
+				tmp[i,p] = grid[i,p-1];
 			}
 			
 		}
@@ -490,10 +487,23 @@ public class Maze : MonoBehaviour
 		{
 			for (int p = i; p >= 1; p--)
 			{
-				grid[p,j] = grid[p - 1,j];
+				tmp[p,j] = grid[p - 1,j];
 			}
-			
 		}
+		grid = CloneGrid(tmp);
+	}
+
+	Bloc[,] CloneGrid(Bloc[,] Grid)
+	{
+		Bloc[,] ret = new Bloc[width,height];
+		for (int i = 0; i < Grid.GetLength(0); i++)
+		{
+			for (int j = 0; j < Grid.GetLength(1); j++)
+			{
+				ret[j, i] = Grid[j, i];
+			}
+		}
+		return ret;
 	}
 	
 //############################################################################################################################################################################
