@@ -62,16 +62,15 @@ public class Maze : MonoBehaviour
 		if (temps == 240)
 		{
 			buton = false;
-			
+			printGrid();
 			detruire(memoire_ligne, memoire_direction);
 			MajBloc(memoire_ligne,memoire_direction);
-			printGrid();
 			ajout_Bloc(memoire_ligne,memoire_direction);
+			printGrid();
 			temps = 0;
 		}
 		if (buton)
 		{
-			printGrid();
 			dico(memoire_ligne,memoire_direction);
 			temps++;
 		}
@@ -309,7 +308,7 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
@@ -356,6 +355,7 @@ public class Maze : MonoBehaviour
 	{
 		Bloc bloc = grid[i, j];
 		GameObject visualprefabbloc;
+		
 		int rd = Random.Range(1,4);
 		if (rd == 1)
 		{
@@ -395,7 +395,7 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if (test >= '0' && test <= '7')
+		if (test >= '0' && test <= '8')
 		{
 			int i = test - 48;
 			if (direction == "bas")
@@ -428,7 +428,7 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
@@ -458,7 +458,7 @@ public class Maze : MonoBehaviour
 	{
 		if (direction == 1)
 		{
-			for (int p = j ; p >= 1; p--)
+			for (int p = j ; p > 0; p--)
 			{
 				grid[i, p] = grid[i, p - 1];
 			}
@@ -471,20 +471,18 @@ public class Maze : MonoBehaviour
 			{
 				grid[p,j] = grid[p+1,j];
 			}
-			
-			
 		}
 		else if (direction == 3)
 		{
-			for (int p = j; p >= 1; p++)
+			for (int p = 0; p < j; p++)
 			{
-				grid[i,p] = grid[i,p-1];
+				grid[i,p] = grid[i,p+1];
 			}
 			
 		}
 		else if (direction == 4)
 		{
-			for (int p = i; p >= 1; p--)
+			for (int p = i; p > 0; p--)
 			{
 		    	grid[p,j] = grid[p - 1,j];
 			}
@@ -498,7 +496,7 @@ public class Maze : MonoBehaviour
 	{
 		char test = colone[0];
 		test = Char.ToLower(test);
-		if(test >= '0' && test <= '7')
+		if(test >= '0' && test <= '8')
 		{
 			int i = test -48;
 			if (direction == "bas")
