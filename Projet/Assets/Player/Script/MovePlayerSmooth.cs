@@ -24,10 +24,10 @@ public class MovePlayerSmooth : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
 		{
-			transform.Translate(0, 0, 0.1f);
+			transform.Translate(0, 0, 0.2f);
 			i += 1;
 			hasToMoveU = true;
-			if ( i == 200)
+			if ( i == 100)
 			{
 				hasToMoveU = false;
 				i = 0;
