@@ -29,8 +29,12 @@ public class MovePlayerSmooth : NetworkBehaviour {
 		{
 			return;
 		}
+		else
+		{
+			deplacement();
+		}
 		
-		deplacement();
+		
 		
 		
 	}

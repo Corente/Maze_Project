@@ -13,12 +13,16 @@ public class CameraFollow : NetworkBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
+
 		if (!isLocalPlayer)
 		{
-			return;
+			Cam.enabled = false;
 		}
-		Came();
+		else
+		{
+			Came();
+		}
+		
 		
 		
 	}
