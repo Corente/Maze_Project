@@ -154,6 +154,7 @@
             <e p="ListExtensions.cs" t="Include" />
             <e p="Maze.cs" t="Include" />
             <e p="Positions.cs" t="Include" />
+            <e p="Teleportation.cs" t="Include" />
             <e p="VisualBloc.cs" t="Include" />
           </e>
           <e p="torch" t="Include">
