@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class MovePlayerSmooth : MonoBehaviour {
+public class MovePlayerSmooth : NetworkBehaviour {
 
 	private bool hasToMoveU;
 	private bool hasToMoveD;
@@ -22,6 +24,22 @@ public class MovePlayerSmooth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
+	{
+		if (!isLocalPlayer)
+		{
+			return;
+		}
+		else
+		{
+			deplacement();
+		}
+		
+		
+		
+		
+	}
+
+	void deplacement()
 	{
 		if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
 		{
