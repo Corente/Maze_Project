@@ -34,8 +34,8 @@ public class CameraFollow : NetworkBehaviour
 		}
 		else
 		{
-			Cam.transform.position = new Vector3(147,440,173);
-			Cam.transform.rotation = new Quaternion(87.84701f,0f,0f,0f);
+			Cam.transform.position = new Vector3(138,460,239);
+			Cam.transform.rotation = new Quaternion(89.079f,0f,0f,0f);
 		}
 	}
 }

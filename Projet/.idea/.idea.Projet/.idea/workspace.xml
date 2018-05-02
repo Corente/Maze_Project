@@ -14,17 +14,31 @@
       <file leaf-file-name="CameraFollow.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+            <state relative-caret-position="354">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <marker date="1525272177839" expanded="false" signature="6:108" ph="..." />
-                <marker date="1525272177839" expanded="true" signature="153:650" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="260:350" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="286:318" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="325:344" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="364:648" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="387:512" ph="{...}" />
-                <marker date="1525272177839" expanded="true" signature="519:645" ph="{...}" />
+                <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+                <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+                <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrollingUVs_Layers.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <marker date="1525257552132" expanded="false" signature="6:44" ph="..." />
+                <marker date="1525257552132" expanded="true" signature="290:483" ph="{...}" />
+                <marker date="1525257552132" expanded="true" signature="386:480" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -33,25 +47,9 @@
       <file leaf-file-name="MovePlayerSmooth.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-              <folding>
-                <marker date="1525271068458" expanded="true" signature="6:137" ph="..." />
-                <marker date="1525271068458" expanded="true" signature="188:1306" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="360:463" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="518:610" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="543:562" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="569:595" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="631:1304" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="689:829" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="780:825" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="891:986" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="939:982" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="1048:1143" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="1096:1139" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="1206:1301" ph="{...}" />
-                <marker date="1525271068458" expanded="true" signature="1255:1297" ph="{...}" />
-              </folding>
+            <state relative-caret-position="884">
+              <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,9 +57,10 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Map/Scripts/Maze.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Map/Scripts/Maze.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -74,8 +73,8 @@
         <option value="$PROJECT_DIR$/Assets/Map/Scripts/Téléportation.cs" />
         <option value="$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs" />
         <option value="$PROJECT_DIR$/Assets/Map/Scripts/Maze.cs" />
-        <option value="$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +103,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -117,7 +117,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -136,7 +135,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Unity Debug.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" pid="11604" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -164,11 +163,16 @@
       <workItem from="1525269240692" duration="59000" />
       <workItem from="1525272076541" duration="56000" />
       <workItem from="1525272668240" duration="161000" />
+      <workItem from="1525274883513" duration="115000" />
+      <workItem from="1525275202693" duration="54000" />
+      <workItem from="1525275306633" duration="12000" />
+      <workItem from="1525275462712" duration="34000" />
+      <workItem from="1525275884724" duration="66000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6099000" />
+    <option name="totallyTimeSpent" value="6380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -185,7 +189,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2057264" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2057264" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -195,7 +199,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -215,7 +219,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+            <startOffsets>
+              <startOffset value="527" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="577" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+            <startOffsets>
+              <startOffset value="581" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="639" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -225,55 +257,212 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1525272177839" expanded="false" signature="6:108" ph="..." />
-            <marker date="1525272177839" expanded="true" signature="153:650" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="260:350" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="286:318" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="325:344" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="364:648" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="387:512" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="519:645" ph="{...}" />
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <marker date="1525257552132" expanded="false" signature="6:44" ph="..." />
+            <marker date="1525257552132" expanded="true" signature="290:483" ph="{...}" />
+            <marker date="1525257552132" expanded="true" signature="386:480" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="884">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1525271068458" expanded="true" signature="6:137" ph="..." />
-            <marker date="1525271068458" expanded="true" signature="188:1306" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="360:463" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="518:610" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="543:562" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="569:595" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="631:1304" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="689:829" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="780:825" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="891:986" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="939:982" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="1048:1143" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="1096:1139" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="1206:1301" ph="{...}" />
-            <marker date="1525271068458" expanded="true" signature="1255:1297" ph="{...}" />
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <marker date="1525257552132" expanded="false" signature="6:44" ph="..." />
+            <marker date="1525257552132" expanded="true" signature="290:483" ph="{...}" />
+            <marker date="1525257552132" expanded="true" signature="386:480" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <marker date="1525257552132" expanded="false" signature="6:44" ph="..." />
+            <marker date="1525257552132" expanded="true" signature="290:483" ph="{...}" />
+            <marker date="1525257552132" expanded="true" signature="386:480" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1525272177839" expanded="false" signature="6:108" ph="..." />
-            <marker date="1525272177839" expanded="true" signature="153:650" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="260:350" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="286:318" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="325:344" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="364:648" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="387:512" ph="{...}" />
-            <marker date="1525272177839" expanded="true" signature="519:645" ph="{...}" />
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/TEXTURES/Lava_Flowing_Shader/Scripts/ScrollingUVs_Layers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <marker date="1525257552132" expanded="false" signature="6:44" ph="..." />
+            <marker date="1525257552132" expanded="true" signature="290:483" ph="{...}" />
+            <marker date="1525257552132" expanded="true" signature="386:480" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1525275227576" expanded="false" signature="6:108" ph="..." />
+            <marker date="1525275227576" expanded="true" signature="153:648" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="260:350" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="286:318" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="325:344" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="364:646" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="387:512" ph="{...}" />
+            <marker date="1525275227576" expanded="true" signature="519:643" ph="{...}" />
           </folding>
         </state>
       </provider>
