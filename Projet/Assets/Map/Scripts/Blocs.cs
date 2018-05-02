@@ -1,46 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 //using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class Bloc
 {
-    public bool west, east, south, north, artefact;
-    public bool type1, type2, type3;
-    private int type;
+    public bool artefact;
+    public string type;
     public int rotate;
     public int xpos, zpos;
-    public VisualBloc obj;
+    public GameObject obj;
     
     public Bloc ()
     {
-        type = Random.Range(1,4);
+        type = null;
         rotate = Random.Range(1,4);
-        //rotate = 1;
-        artefact = Random.Range(0,1) == 1;
-        type1 = false;
-        type2 = false;
-        type3 = false;
-       // obj = new VisualBloc();
+        artefact = Random.Range(1,11) == 1;
+        obj = null;
         
-        Typed();
     }
 
-    private void Typed()
-    {
-        if (type == 1)
-        {
-            type1 = true;
-        }
-        else if (type == 2)
-        {
-            type2 = true;
-        }
-        else if (type == 3)
-        {
-            type3 = true;
-        }
-    }
-    
     
 }
