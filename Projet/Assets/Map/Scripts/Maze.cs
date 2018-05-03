@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
+using UnityEngine.EventSystems;
 
 public class Maze : MonoBehaviour
 {
@@ -39,7 +41,7 @@ public class Maze : MonoBehaviour
 	
 	private bool buton;
 
-	private int temps;
+	private float timer;
 	
 	
 	// Use this for initialization
@@ -55,7 +57,7 @@ public class Maze : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (temps == 240)
+		if (Time.deltaTime - timer > 30)
 		{
 			buton = false;
 			printGrid();
@@ -63,12 +65,12 @@ public class Maze : MonoBehaviour
 			MajBloc(memoire_ligne,memoire_direction);
 			ajout_Bloc(memoire_ligne,memoire_direction);
 			printGrid();
-			temps = 0;
+			timer = 0;
 		}
 		if (buton)
 		{
 			dico(memoire_ligne,memoire_direction);
-			temps++;
+			
 		}
 		
 	}
@@ -87,7 +89,7 @@ public class Maze : MonoBehaviour
 			buton = true;
 			memoire_direction = direction.text;
 			memoire_ligne = ligne.text;
-			temps = 0;
+			timer = Time.deltaTime;
 		}
 	}
 

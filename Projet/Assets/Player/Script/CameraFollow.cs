@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.EventSystems;
 public class CameraFollow : NetworkBehaviour
 {
 
@@ -34,8 +35,9 @@ public class CameraFollow : NetworkBehaviour
 		}
 		else
 		{
-			Cam.transform.position = new Vector3(138,460,239);
+			/*Cam.transform.position = new Vector3(138,460,239);
 			Cam.transform.rotation = new Quaternion(89.079f,0f,0f,0f);
+			Debug.Log("bonjour");*/
 		}
 	}
 }
