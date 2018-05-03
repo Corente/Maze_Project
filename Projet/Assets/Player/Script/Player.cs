@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -12,10 +13,12 @@ public class Player : MonoBehaviour {
 
 	public int i;
 
-	public List<Artefact> _objects;
+	public List<string> _objects;
 	public int _score;
+	public Text toPrint;
+	public Text youWin;
 
-	public Player(List<Artefact> objects)
+	public Player(List<string> objects)
 	{
 		_objects = objects;
 	}
@@ -26,7 +29,10 @@ public class Player : MonoBehaviour {
 		hasToMoveL = false;
 		hasToMoveR = false;
 		i = 0;
-		_objects = new List<Artefact>();
+		_objects = new List<string>();
+		_score = 0;
+		toPrint.text = "Score : " + "0";
+		youWin.text = "";
 	}
 	
 	void Update () {
@@ -74,16 +80,20 @@ public class Player : MonoBehaviour {
 				i = 0;
 			}
 		}
+		_score = Score();
+		toPrint.text = "Score : " + _score.ToString();
+		YouWin();
 	}
 	
 	private void OnTriggerEnter(Collider other)
 	{
-		string artefact;
+		string artefact = other.gameObject.name;
 		int i = 0;
 		if (other.gameObject.CompareTag("Artefact"))
 		{
-			artefact = other.gameObject.name;
-			_objects.Add(new Artefact(artefact));
+			/*artefact = other.gameObject.name;
+			_objects.Add(new Artefact(artefact));*/
+			_objects.Add(artefact);
 		}
 		else if (other.gameObject.CompareTag("Player"))
 		{
@@ -94,5 +104,13 @@ public class Player : MonoBehaviour {
 	public int Score()
 	{
 		return _objects.Count;
+	}
+
+	public void YouWin()
+	{
+		if (Score() == 3)
+		{
+			youWin.text = "You are free !";
+		}
 	}
 }

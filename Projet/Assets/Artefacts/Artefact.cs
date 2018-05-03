@@ -19,6 +19,7 @@ public class Artefact : MonoBehaviour
 		type = artefacts;
 	}
 	
+	
 	private void OnTriggerEnter(Collider other)
 	{
 		int i = 0;
@@ -32,6 +33,7 @@ public class Artefact : MonoBehaviour
 				timer -= 1;
 			}*/
 			Destroy(gameObject);
+			
 		}
 	}
 }
