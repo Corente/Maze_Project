@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class MovePlayerSmooth : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	public bool hasToMoveU;
 	public bool hasToMoveD;
@@ -11,16 +11,24 @@ public class MovePlayerSmooth : MonoBehaviour {
 	public bool hasToMoveR;
 
 	public int i;
-	// Use this for initialization
+
+	public List<Artefact> _objects;
+	public int _score;
+
+	public Player(List<Artefact> objects)
+	{
+		_objects = objects;
+	}
+
 	void Start () {
 		hasToMoveU = false;
 		hasToMoveD = false;
 		hasToMoveL = false;
 		hasToMoveR = false;
 		i = 0;
+		_objects = new List<Artefact>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
 		{
@@ -43,10 +51,6 @@ public class MovePlayerSmooth : MonoBehaviour {
 				hasToMoveD = false;
 				i = 0;
 			}
-			/*if (Input.GetKeyDown(KeyCode.DownArrow))
-			{
-				transform.Rotate(0, 180, 0);
-			}*/
 		}
 		else if (Input.GetKeyDown(KeyCode.LeftArrow) || hasToMoveL)
 		{
@@ -58,10 +62,6 @@ public class MovePlayerSmooth : MonoBehaviour {
 				hasToMoveL = false;
 				i = 0;
 			}
-			/*if (Input.GetKeyDown(KeyCode.LeftArrow))
-			{
-				transform.Rotate(0, -90, 0);
-			}*/
 		}
 		else if (Input.GetKeyDown(KeyCode.RightArrow) || hasToMoveR)
 		{
@@ -73,10 +73,26 @@ public class MovePlayerSmooth : MonoBehaviour {
 				hasToMoveR = false;
 				i = 0;
 			}
-			/*if (Input.GetKeyDown(KeyCode.RightArrow))
-			{
-				transform.Rotate(0, 90, 0);
-			}*/
 		}
+	}
+	
+	private void OnTriggerEnter(Collider other)
+	{
+		string artefact;
+		int i = 0;
+		if (other.gameObject.CompareTag("Artefact"))
+		{
+			artefact = other.gameObject.name;
+			_objects.Add(new Artefact(artefact));
+		}
+		else if (other.gameObject.CompareTag("Player"))
+		{
+			Debug.Log("Hello!");
+		}
+	}
+
+	public int Score()
+	{
+		return _objects.Count;
 	}
 }

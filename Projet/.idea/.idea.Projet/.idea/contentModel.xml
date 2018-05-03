@@ -8,13 +8,18 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Artefacts" t="Include">
+          <e p="Artefact.cs" t="Include" />
+          <e p="Flying_Tree" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Leafs.shader" t="Include" />
+            </e>
+          </e>
           <e p="Japanese Coin" t="Include">
             <e p="Environment" t="Include">
               <e p="HDR_Readme.txt" t="Include" />
             </e>
             <e p="hello there.txt" t="Include" />
           </e>
-          <e p="PickArtefact.cs" t="Include" />
         </e>
         <e p="Map" t="Include">
           <e p="Lava_Flowing_Shader" t="Include">
@@ -64,8 +69,7 @@
           <e p="Script" t="Include">
             <e p="CameraFollow.cs" t="Include" />
             <e p="Main_menu.cs" t="Include" />
-            <e p="MovePlayerSmooth.cs" t="Include" />
-            <e p="RotationNoSmooth.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">
