@@ -10,8 +10,9 @@ using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
-public class Maze : MonoBehaviour
+public class Maze : NetworkBehaviour
 {
 
 	public int width, height;
