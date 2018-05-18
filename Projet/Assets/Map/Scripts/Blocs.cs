@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 //using NUnit.Framework.Constraints;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Bloc
 {
@@ -21,26 +22,5 @@ public class Bloc
         
     }
 
-    private string Typed()
-    {
-        int rd = Random.Range(1,4);
-        string ret = "";
-        if (rd == 1)
-        {
-            ret = "L";
-        }
-        else if (rd == 2)
-        {
-            ret = "T";
-        }
-        else if (rd == 3)
-        {
-            ret = "I";
-        }
-        return ret;
-    }
-    
-    
-    
     
 }

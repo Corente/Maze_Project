@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
+using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
-public class Maze : MonoBehaviour
+public class Maze : NetworkBehaviour
 {
 
 	public int width, height;
@@ -26,10 +29,10 @@ public class Maze : MonoBehaviour
 
 	protected GameObject visualBlocInit;
 
-	public GameObject player1;
-	public GameObject player2;
-	public GameObject player3;
-	public GameObject player4;
+	public GameObject Postion1;
+	public GameObject Postion2;
+	public GameObject Postion3;
+	public GameObject Postion4;
 
 	public InputField ligne;
 	public InputField direction;
@@ -39,23 +42,23 @@ public class Maze : MonoBehaviour
 	
 	private bool buton;
 
-	private int temps;
+	private float timer;
 	
 	
 	// Use this for initialization
 	void Start () {
 		grid = new Bloc[width,height];
 		Init();
-		player1.transform.position = grid[0, 0].obj.transform.position + new Vector3(0,3,0);
-		player2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
-		player3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
-		player4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
+		Postion1.transform.position = grid[0, 0].obj.transform.position + new Vector3(0,3,0);
+		Postion2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
+		Postion3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
+		Postion4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (temps == 240)
+		if (Time.deltaTime - timer > 30)
 		{
 			buton = false;
 			printGrid();
@@ -63,12 +66,12 @@ public class Maze : MonoBehaviour
 			MajBloc(memoire_ligne,memoire_direction);
 			ajout_Bloc(memoire_ligne,memoire_direction);
 			printGrid();
-			temps = 0;
+			timer = 0;
 		}
 		if (buton)
 		{
 			dico(memoire_ligne,memoire_direction);
-			temps++;
+			
 		}
 		
 	}
@@ -87,7 +90,7 @@ public class Maze : MonoBehaviour
 			buton = true;
 			memoire_direction = direction.text;
 			memoire_ligne = ligne.text;
-			temps = 0;
+			timer = Time.deltaTime;
 		}
 	}
 
