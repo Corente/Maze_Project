@@ -97327,8 +97327,8 @@ MonoBehaviour:
   Postion2: {fileID: 1075456756}
   Postion3: {fileID: 891977549}
   Postion4: {fileID: 1054117298}
-  ligne: {fileID: 0}
-  direction: {fileID: 0}
+  ligne: {fileID: 2110338045}
+  direction: {fileID: 980107221}
 --- !u!45 &1646744729
 Skybox:
   m_ObjectHideFlags: 0
