@@ -20,7 +20,7 @@ V : Fait, X : non fait
 - X B/M Implémentation des bonus/malus
 - X M custom blocs
 - X M rapprocher le truc apocalyptique pr qu’on en voit pas les bords
-- X B/M A barre d’inventaire des bonus en réserve (1 max??) 
+- X B/M A barre d’inventaire et des bonus en réserve (1 max??) 
 - X B/M mini map
 - X IA (commencer par créer un fichier map de caractères ??)
 - X M Interface de sélection du bloc 
