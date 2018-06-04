@@ -11,9 +11,9 @@ V : Fait, X : non fait
 
 - V Q pb du canvas : Résolu
 - V Q pb du chiffre random : Résolu
-- X Q pb des images finale :
-- V Q pb de la fin pr yellow one :
-- X Q selection du QTE (timer modulo) :
+- X Q pb des images finale : pb finished?
+- V Q pb de la fin pr yellow one : Résolu
+- X Q selection du QTE (timer modulo) : pb gameobject
 - V Q Page d’explication QTE :
 - X Q Animation pour pièce pigée :
 - X B/M Téléportation
