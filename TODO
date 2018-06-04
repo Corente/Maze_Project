@@ -13,7 +13,7 @@ V : Fait, X : non fait
 - V Q pb du chiffre random : Résolu
 - V Q pb des images finale : Résolu
 - V Q pb de la fin pr yellow one : Résolu
-- X Q selection du QTE (timer modulo) : enabled les autres
+- V Q selection du QTE (timer modulo) : enabled les autres
 - V Q Page d’explication QTE :
 - X Q Animation pour pièce pigée :
 - X B/M Téléportation
