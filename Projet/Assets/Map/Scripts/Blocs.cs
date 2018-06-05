@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class Bloc
 {
-    public bool artefact;
+    public GameObject AMB;
     public string type;
     public int rotate;
     public int xpos, zpos;
@@ -17,7 +17,7 @@ public class Bloc
     {
         type = null;
         rotate = Random.Range(1,4);
-        artefact = Random.Range(1,11) == 1;
+        AMB = null;       
         obj = null;
         
     }

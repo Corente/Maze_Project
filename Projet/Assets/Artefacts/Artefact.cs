@@ -3,37 +3,77 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class Artefact : MonoBehaviour
+public class Artefact : Maze
 {
-	public ParticleSystem effect;
+	public GameObject tree;
+	public GameObject statue;
+	public GameObject coin;
+	public Maze maze;
+	protected GameObject artefact;
 
-	public string type;
+	public bool isTaken;
 
+	
+	/*
+	 * At the beginning
+	 */
+	
 	private void Start()
 	{
-		effect.GetComponent<ParticleSystem>().Stop();
+		isTaken = false;
+		artefact = Creation();
 	}
 
-	public Artefact(string artefacts)
+
+	private void Update()
 	{
-		type = artefacts;
+		
+		if (isTaken)
+		{
+			Destroy(artefact);
+		}
 	}
-	
-	
+	/*
+	 * Function on collision
+	 */
+
 	private void OnTriggerEnter(Collider other)
 	{
-		int i = 0;
-		if (other.gameObject.CompareTag("Player"))
+		
+		Destroy(gameObject);
+		/*if (other.gameObject.CompareTag("Player"))
 		{
-			/*effect.GetComponent<ParticleSystem>().Play();
-			float timer = 15;
-			while (timer > 0)
-			{
-				gameObject.transform.Translate(0, 0, 0.1f);
-				timer -= 1;
-			}*/
-			Destroy(gameObject);
-			
+			//Destroy(artefact);
+			//artefact = Creation();
+			isTaken = true;
+		}*/
+	}
+
+	/*
+	 * Creation d'un nouvel artefact
+	 */
+	
+	public GameObject Creation()
+	{
+		GameObject gameObject;
+		int rdn = Random.Range(0, 3);
+		if (rdn == 1)
+		{
+			artefact = tree;
 		}
+		else if (rdn == 2)
+		{
+			artefact = statue;
+		}
+		else
+		{
+			artefact = coin;
+		}
+		float x = Random.Range(0, 9);
+		float z = Random.Range(1, 10);
+		float y = 3;
+		
+		//grid[(int) x, (int) z].AMB = Instantiate(artefact, new Vector3((float) (grid[(int) x, (int) z]).xpos * 20, y, (float) (grid[(int) x, (int) z]).zpos * 20), new Quaternion(0, 0, 0, 0));
+		return grid[(int) x, (int) z].AMB;
 	}
 }

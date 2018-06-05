@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Corentin\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_Projet.-344737537.00" t="ExcludeRecursive" />
-    <e p="D:\Mes docs\Kolasi\Projet" t="IncludeRecursive">
+    <e p="C:\Users\Corentin\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_Projet.829103351.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Corentin\Desktop\Projet" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Artefacts" t="Include">
           <e p="Artefact.cs" t="Include" />
+          <e p="Assets" t="Include">
+            <e p="Japanese Coin" t="Include">
+              <e p="Environment" t="Include">
+                <e p="HDR_Readme.txt" t="Include" />
+              </e>
+              <e p="hello there.txt" t="Include" />
+            </e>
+          </e>
           <e p="Flying_Tree" t="Include">
             <e p="Materials" t="Include">
               <e p="Leafs.shader" t="Include" />

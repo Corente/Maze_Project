@@ -1,6 +1,5 @@
 fileFormatVersion: 2
-guid: 39ca821ae307c3c42bea36f50c5896bf
-timeCreated: 18446744011573954816
+guid: 54058dafcb8e2c54eb052ba0925bb663
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,7 +9,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Plane001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: b5ea60d093658d342bd8a00ae500043b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -29,6 +33,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -53,6 +58,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
