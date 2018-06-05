@@ -22,6 +22,12 @@ public class Maze : NetworkBehaviour
 	public GameObject BlocL;
 	public GameObject BlocI;
 
+	public GameObject Tree;
+	public GameObject Statue;
+	public GameObject Coin;
+
+	private int max_artefact = 4;
+
 	private Bloc[,] grid;
 	
 
@@ -141,46 +147,127 @@ public class Maze : NetworkBehaviour
 			for (int w = 0; w < grid.GetLongLength(1); w++)
 			{
 				Bloc bloc = grid[p, w];
-
 				GameObject visualprefabbloc;
-				int rd = Random.Range(1,4);
-				if (rd == 1)
-				{
-					visualprefabbloc = BlocI;
-					bloc.type = "I";
-				}
-				else if (rd == 2)
+
+				if (p == 0 && w == 0)
 				{
 					visualprefabbloc = BlocL;
 					bloc.type = "L";
+					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
+				
+				
+					visualBlocInit.transform.parent = transform;
+					visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+
+					bloc.obj = visualBlocInit;
+				}
+				else if (p == 0 && w == grid.GetLongLength(1) - 1)
+				{
+					visualprefabbloc = BlocL;
+					bloc.type = "L";
+					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
+				
+				
+					visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, -90, 0));
+					
+					
+					visualBlocInit.transform.parent = transform;
+					visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+
+					bloc.obj = visualBlocInit;
+				}
+				else if (p == grid.GetLength(0) - 1 && w == 0)
+				{
+					visualprefabbloc = BlocL;
+					bloc.type = "L";
+					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
+				
+				
+					visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, 90, 0));
+					
+					
+					visualBlocInit.transform.parent = transform;
+					visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+
+					bloc.obj = visualBlocInit;
+				}
+				else if (p == grid.GetLength(0) - 1 && w == grid.GetLength(1) - 1)
+				{
+					visualprefabbloc = BlocL;
+					bloc.type = "L";
+					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos) * 20),
+						Quaternion.identity) as GameObject;
+
+
+					visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, 180, 0));
+
+
+					visualBlocInit.transform.parent = transform;
+					visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+
+					bloc.obj = visualBlocInit;
 				}
 				else
 				{
-					visualprefabbloc = BlocT;
-					bloc.type = "T";
+					int rd = Random.Range(1,4);
+					if (rd == 1)
+					{
+						visualprefabbloc = BlocI;
+						bloc.type = "I";
+					}
+					else if (rd == 2)
+					{
+						visualprefabbloc = BlocL;
+						bloc.type = "L";
+					}
+					else
+					{
+						visualprefabbloc = BlocT;
+						bloc.type = "T";
+					}
+				
+				
+					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
+				
+				
+					int t = 0;
+					while (t<bloc.rotate)
+					{
+						visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, -90, 0));
+						t++;
+					}
+				
+					visualBlocInit.transform.parent = transform;
+					visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
+
+					bloc.obj = visualBlocInit;
+
+
+					int rd2 = Random.Range(1, 101);
+					if (rd2 < 10  && max_artefact >= 1)
+					{
+						int rd3 = Random.Range(1, 4);
+						if (rd3 == 1)
+						{
+							bloc.AMB = Instantiate(Tree, new Vector3(bloc.xpos*20,3f,(height - bloc.zpos)* 20),Quaternion.identity);
+						}
+						else if (rd3 == 2)
+						{
+							bloc.AMB =Instantiate(Coin, new Vector3(bloc.xpos*20,3f,(height - bloc.zpos)* 20),Quaternion.identity);
+						}
+						else
+						{
+							bloc.AMB = Instantiate(Statue, new Vector3(bloc.xpos*20,3f,(height - bloc.zpos)* 20),Quaternion.identity);
+						}
+						max_artefact--;
+					}
+					else if (rd2 > 30 && rd2 < 60)
+					{
+					
+					}
 				}
-				
-				
-				visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
-				
-				
-				int t = 0;
-				while (t<bloc.rotate)
-				{
-					visualBlocInit.transform.Rotate(Vector3.back + new Vector3(0, -90, 0));
-					t++;
-				}
-				
-				visualBlocInit.transform.parent = transform;
-				visualBlocInit.transform.name = bloc.xpos + "_" + bloc.zpos;
-
-				bloc.obj = visualBlocInit;
-
-
 			}
 		}
-			
-		
 	}
 	
 	
@@ -491,6 +578,7 @@ public class Maze : NetworkBehaviour
 
 	void detruire(string colone, string direction)
 	{
+		int p = 100;
 		char test = colone[0];
 		test = Char.ToLower(test);
 		if(test >= '0' && test <= '8')
@@ -498,10 +586,20 @@ public class Maze : NetworkBehaviour
 			int i = test -48;
 			if (direction == "bas")
 			{
+				while (p > 0)
+				{
+					grid[i,8].obj.transform.Translate(0,0,-5);
+					p--;
+				}
 				Destroy(grid[i,8].obj);
 			}
 			else if (direction == "haut")
 			{
+				while (p > 0)
+				{
+					grid[i,0].obj.transform.Translate(0,0,-5);
+					p--;
+				}
 				Destroy(grid[i,0].obj);
 			}
 		}
@@ -510,10 +608,20 @@ public class Maze : NetworkBehaviour
 			int j = test - 97;
 			if (direction == "gauche")
 			{
+				while (p > 0)
+				{
+					grid[0,j].obj.transform.Translate(0,0,-5);
+					p--;
+				}
 				Destroy(grid[0,j].obj);
 			}
 			else if (direction == "droite")
 			{
+				while (p > 0)
+				{
+					grid[8,j].obj.transform.Translate(0,0,-5);
+					p--;
+				}
 				Destroy(grid[8,j].obj);
 			}
 		}
