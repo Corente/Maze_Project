@@ -60311,6 +60311,8 @@ GameObject:
   - component: {fileID: 1167868379}
   - component: {fileID: 1167868378}
   - component: {fileID: 1167868377}
+  - component: {fileID: 1167868382}
+  - component: {fileID: 1167868381}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -60400,6 +60402,59 @@ RectTransform:
   m_AnchoredPosition: {x: 304.99994, y: 279.49982}
   m_SizeDelta: {x: 610, y: 559}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1167868381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167868376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &1167868382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167868376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &1171669134
 GameObject:
   m_ObjectHideFlags: 0
@@ -90450,15 +90505,16 @@ MonoBehaviour:
   BlocT: {fileID: 1235784552191098, guid: 840ea21692eaae448bf742136677e489, type: 2}
   BlocL: {fileID: 1551164737068734, guid: e8bb38d250c005449b18e7ae041e422c, type: 2}
   BlocI: {fileID: 1310400056860520, guid: a47b6e2ef18e3cb478e506f0ac5c99dd, type: 2}
-  Tree: {fileID: 1918564443736644, guid: a05878a28af783845b7e7f2a6368e0a7, type: 2}
-  Statue: {fileID: 1865267307568310, guid: 2fe903ccb20b16341844a94ee1d98c9b, type: 2}
-  Coin: {fileID: 1465525555979202, guid: 07b98a1f1e2270e4a917822d4020e00d, type: 2}
   Postion1: {fileID: 1365122510}
   Postion2: {fileID: 1075456756}
   Postion3: {fileID: 891977549}
   Postion4: {fileID: 1054117298}
   ligne: {fileID: 2110338045}
   direction: {fileID: 980107221}
+  tree: {fileID: 1918564443736644, guid: a05878a28af783845b7e7f2a6368e0a7, type: 2}
+  statue: {fileID: 1865267307568310, guid: 2fe903ccb20b16341844a94ee1d98c9b, type: 2}
+  coin: {fileID: 1465525555979202, guid: 07b98a1f1e2270e4a917822d4020e00d, type: 2}
+  isTaken: 0
 --- !u!45 &1646744729
 Skybox:
   m_ObjectHideFlags: 0
