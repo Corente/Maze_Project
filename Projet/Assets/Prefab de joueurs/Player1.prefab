@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cam: {fileID: 20744931450902376}
-  TourDuJoueur: 1
+  TourDuJoueur: 0
 --- !u!114 &114868269725022504
 MonoBehaviour:
   m_ObjectHideFlags: 1

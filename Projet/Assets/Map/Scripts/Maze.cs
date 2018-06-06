@@ -48,23 +48,25 @@ public class Maze : NetworkBehaviour
 
 	private float timer;
 	
+	
 	public GameObject tree;
 	public GameObject statue;
 	public GameObject coin;
-	
-	protected GameObject artefact;
-
-	public bool isTaken = false;
-
+	public Maze maze;
+	protected GameObject artefactPlayer1;
+	protected GameObject artefactPlayer2;
+	protected GameObject artefactPlayer3;
+	protected GameObject artefactPlayer4;
 	
 	
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 		grid = new Bloc[width,height];
 		Init();
-		
-		artefact = Creation();
+		artefactPlayer1 = Creation();
+		artefactPlayer2 = Creation();
+		artefactPlayer3 = Creation();
+		artefactPlayer4 = Creation();
 		Postion1.transform.position = grid[0, 0].obj.transform.position + new Vector3(0,3,0);
 		Postion2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
 		Postion3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
@@ -89,10 +91,10 @@ public class Maze : NetworkBehaviour
 			dico(memoire_ligne,memoire_direction);
 			
 		}
-		if (isTaken)
-		{
-			Destroy(artefact);
-		}
+		artefactPlayer1 = artefactPlayer1 == null ? Creation() : artefactPlayer1;
+		artefactPlayer2 = artefactPlayer2 == null ? Creation() : artefactPlayer2;
+		artefactPlayer3 = artefactPlayer3 == null ? Creation() : artefactPlayer3;
+		artefactPlayer4 = artefactPlayer4 == null ? Creation() : artefactPlayer4;
 		
 	}
 
@@ -620,27 +622,12 @@ public class Maze : NetworkBehaviour
 		}
 	}
 		
-//#######################################################################################################################################################################################
-//                             ARTEFACT
-	private void OnTriggerEnter(Collider other)
-	{
-		
-		Destroy(gameObject);
-		/*if (other.gameObject.CompareTag("Player"))
-		{
-			//Destroy(artefact);
-			//artefact = Creation();
-			isTaken = true;
-		}*/
-	}
-
-	/*
-	 * Creation d'un nouvel artefact
-	 */
+//############################################################################################################################################################################
+//                         ARTAFACT CREATION + DESTRUCTION	
 	
 	public GameObject Creation()
 	{
-		GameObject gameObject;
+		GameObject artefact = new GameObject();
 		int rdn = Random.Range(0, 3);
 		if (rdn == 1)
 		{
@@ -655,12 +642,18 @@ public class Maze : NetworkBehaviour
 			artefact = coin;
 		}
 		float x = Random.Range(0, 9);
-		float z = Random.Range(1, 10);
+		float z = Random.Range(0, 9);
 		float y = 3;
-		
-		grid[(int) x, (int) z].AMB = Instantiate(artefact, new Vector3((float) (grid[(int) x, (int) z]).xpos * 20, y, (float) (grid[(int) x, (int) z]).zpos * 20), new Quaternion(0, 0, 0, 0));
+		while (grid[(int) x, (int) z].AMB != null)
+		{
+			x = Random.Range(0, 9);
+			z = Random.Range(0, 9);
+		}
+		grid[(int) x, (int) z].AMB = Instantiate(artefact, new Vector3((float) (grid[(int) x, (int) z]).xpos * 20, y, (float) ((grid[(int) x, (int) z]).zpos + 1) * 20), new Quaternion(0, 0, 0, 0));
 		return grid[(int) x, (int) z].AMB;
 	}
+	
+	
 }
 
 
