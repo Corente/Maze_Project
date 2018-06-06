@@ -7,7 +7,7 @@ public class CameraFollow : NetworkBehaviour
 {
 
 	public Camera Cam;
-	public bool TourDuJoueur;
+	private bool TourDuJoueur;
 
 	
 	
@@ -39,5 +39,15 @@ public class CameraFollow : NetworkBehaviour
 			Cam.transform.rotation = new Quaternion(89.079f,0f,0f,0f);
 			Debug.Log("bonjour");*/
 		}
+	}
+
+	public void TourVrai()
+	{
+		TourDuJoueur = true;
+	}
+
+	public void TourFalse()
+	{
+		TourDuJoueur = false;
 	}
 }

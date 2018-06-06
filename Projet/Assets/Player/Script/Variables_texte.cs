@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class Variables_texte : NetworkBehaviour 
 {
-	public string Ligne;
-	public string Direction;
-
 	public InputField ligne;
 	public InputField direction;
 
-	public void Get_text()
+	public string GetDirection()
 	{
-		Ligne = ligne.text;
-		Direction = direction.text;
+		return direction.text;
+	}
+
+	public string GetLigne()
+	{
+		return ligne.text;
 	}
 }

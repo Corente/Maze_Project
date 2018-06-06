@@ -59,7 +59,8 @@ public class Maze : NetworkBehaviour
 	
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		grid = new Bloc[width,height];
 		Init();
 		artefactPlayer1 = Creation();
@@ -70,17 +71,11 @@ public class Maze : NetworkBehaviour
 		Postion2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
 		Postion3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
 		Postion4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
-		
-		
-		
-		
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		
-		
 		if (Time.deltaTime - timer > 30)
 		{
 			buton = false;
@@ -104,15 +99,15 @@ public class Maze : NetworkBehaviour
 	
 //######################################################################################################################################################################################
 //     AUTRES
-	
-	
-	
-	
-	public void clicked()
+
+
+
+
+	public void Bouge(string direction,string ligne)
 	{
 		buton = true;
-		memoire_direction = Variables.GetComponent<Variables_texte>().Direction;
-		memoire_ligne = Variables.GetComponent<Variables_texte>().Direction;
+		memoire_direction = direction;
+		memoire_ligne = ligne;
 		timer = Time.deltaTime;
 		
 	}

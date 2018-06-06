@@ -23,6 +23,7 @@
             <e p="hello there.txt" t="Include" />
           </e>
         </e>
+        <e p="Game.cs" t="Include" />
         <e p="Map" t="Include">
           <e p="Scripts" t="Include">
             <e p="Blocs.cs" t="Include" />
@@ -170,7 +171,6 @@
           <e p="WIN.cs" t="Include" />
           <e p="Yellow.cs" t="Include" />
         </e>
-        <e p="SynchroTexte.cs" t="Include" />
         <e p="trap3" t="Include">
           <e p="badfluid@gmail.com.txt" t="Include" />
         </e>
