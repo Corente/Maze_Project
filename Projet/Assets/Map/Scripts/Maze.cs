@@ -38,8 +38,7 @@ public class Maze : NetworkBehaviour
 	public GameObject Postion3;
 	public GameObject Postion4;
 
-	public InputField ligne;
-	public InputField direction;
+	public GameObject Variables;
 	private string memoire_ligne;
 	private string memoire_direction;
 	
@@ -52,7 +51,7 @@ public class Maze : NetworkBehaviour
 	public GameObject tree;
 	public GameObject statue;
 	public GameObject coin;
-	public Maze maze;
+	
 	protected GameObject artefactPlayer1;
 	protected GameObject artefactPlayer2;
 	protected GameObject artefactPlayer3;
@@ -71,19 +70,23 @@ public class Maze : NetworkBehaviour
 		Postion2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
 		Postion3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
 		Postion4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
+		
+		
+		
+		
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		
+		
 		if (Time.deltaTime - timer > 30)
 		{
 			buton = false;
-			printGrid();
 			detruire(memoire_ligne, memoire_direction);
 			MajBloc(memoire_ligne,memoire_direction);
 			ajout_Bloc(memoire_ligne,memoire_direction);
-			printGrid();
 			timer = 0;
 		}
 		if (buton)
@@ -107,13 +110,11 @@ public class Maze : NetworkBehaviour
 	
 	public void clicked()
 	{
-		if (ligne.text.Length != 0 && direction.text.Length != 0)
-		{
-			buton = true;
-			memoire_direction = direction.text;
-			memoire_ligne = ligne.text;
-			timer = Time.deltaTime;
-		}
+		buton = true;
+		memoire_direction = Variables.GetComponent<Variables_texte>().Direction;
+		memoire_ligne = Variables.GetComponent<Variables_texte>().Direction;
+		timer = Time.deltaTime;
+		
 	}
 
 	public void printGrid()
