@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3da3d88-7be8-4776-ad18-9a758fcefbd5" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="QTE_Game_Moving_Phantom.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Moving_Phantom.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+              <folding>
+                <marker date="1528209102000" expanded="false" signature="6:146" ph="..." />
+                <marker date="1528209102000" expanded="true" signature="192:1594" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="342:754" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="809:1189" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="881:962" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1000:1186" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1212:1229" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1255:1412" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1436:1590" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1451:1559" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QTE_Intrus.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Intrus.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="91" column="34" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+              <folding>
+                <marker date="1528209059000" expanded="false" signature="7:147" ph="..." />
+                <marker date="1528209059000" expanded="true" signature="179:2543" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="423:1733" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1484:1730" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1611:1663" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1671:1726" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1785:2072" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1854:1973" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="1893:1926" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2010:2068" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2108:2280" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2148:2244" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2301:2322" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2346:2366" ph="{...}" />
+                <marker date="1528209059000" expanded="true" signature="2405:2539" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QTE_Game_Quick.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Quick.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+              <folding>
+                <marker date="1528209102000" expanded="false" signature="6:146" ph="..." />
+                <marker date="1528209102000" expanded="true" signature="182:1328" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="300:621" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="676:1104" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="746:871" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="909:1098" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1127:1144" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1170:1324" ph="{...}" />
+                <marker date="1528209102000" expanded="true" signature="1185:1293" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WIN.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/WIN.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <marker date="1528208488000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1528208488000" expanded="true" signature="121:554" ph="{...}" />
+                <marker date="1528208488000" expanded="true" signature="279:330" ph="{...}" />
+                <marker date="1528208488000" expanded="true" signature="349:400" ph="{...}" />
+                <marker date="1528208488000" expanded="true" signature="421:476" ph="{...}" />
+                <marker date="1528208488000" expanded="true" signature="497:552" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="End.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/End.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <folding>
+                <marker date="1528208489000" expanded="false" signature="6:100" ph="..." />
+                <marker date="1528208489000" expanded="true" signature="134:1154" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="304:685" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="740:1152" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="856:1149" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="887:999" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1030:1143" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Playing.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/QTE/Playing.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <folding>
+                <marker date="1528208489000" expanded="false" signature="6:146" ph="..." />
+                <marker date="1528208489000" expanded="true" signature="184:1954" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="385:894" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="948:1053" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1027:1048" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1077:1952" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1256:1490" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1517:1728" ph="{...}" />
+                <marker date="1528208489000" expanded="true" signature="1735:1946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/End.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Moving_Phantom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/Playing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/QTE_Intrus_Lose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/WIN.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/Main_menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Script/RotationNoSmooth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Quick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/Floating.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QTE/QTE_Intrus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Projet/Assets/Map/Scripts/Teleportation.cs" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+        <option value="$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main_menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Map/Scripts/Téléportation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Floating.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE_Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/QTE_Intrus_Lose.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE_Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/QTE_Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/WIN_OR_LOSE.cs" />
+        <option value="$PROJECT_DIR$/Assets/Playing.cs" />
+        <option value="$PROJECT_DIR$/Assets/WIN.cs" />
+        <option value="$PROJECT_DIR$/Assets/End.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/End.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/WIN.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/Playing.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/QTE_Intrus.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/QTE_Game_Moving_Phantom.cs" />
+        <option value="$PROJECT_DIR$/Assets/QTE/QTE_Game_Quick.cs" />
+        <option value="$PROJECT_DIR$/../../../Projet/Assets/Map/Scripts/Teleportation.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="725" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Projet (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Projet (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Projet (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Projet (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="QTE" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Unity Debug.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3da3d88-7be8-4776-ad18-9a758fcefbd5" name="Default" comment="" />
+      <created>1521127719924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521127719924</updated>
+      <workItem from="1521127723964" duration="322000" />
+      <workItem from="1521128884959" duration="250000" />
+      <workItem from="1521130339267" duration="260000" />
+      <workItem from="1521811765270" duration="422000" />
+      <workItem from="1525167413801" duration="1224000" />
+      <workItem from="1525168972666" duration="658000" />
+      <workItem from="1525170038293" duration="574000" />
+      <workItem from="1525253942522" duration="545000" />
+      <workItem from="1525254928961" duration="98000" />
+      <workItem from="1525255265325" duration="208000" />
+      <workItem from="1525255690143" duration="1102000" />
+      <workItem from="1525264729896" duration="9573000" />
+      <workItem from="1525348881059" duration="9599000" />
+      <workItem from="1525371220499" duration="795000" />
+      <workItem from="1528057647018" duration="900000" />
+      <workItem from="1528102229819" duration="15351000" />
+      <workItem from="1528208473408" duration="1017000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="42898000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/Floating.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Moving_Phantom.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <marker date="1528209102000" expanded="false" signature="6:146" ph="..." />
+            <marker date="1528209102000" expanded="true" signature="192:1594" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="342:754" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="809:1189" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="881:962" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1000:1186" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1212:1229" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1255:1412" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1436:1590" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1451:1559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/RotationNoSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Téléportation.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/RotationNoSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/MovePlayerSmooth.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Main_menu.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Téléportation.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Map/torch/scripts/Torchelight.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Move.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Floating.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/QTE_Game.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/Main_menu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Lose.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Intrus_Lose.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE_Movement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/Floating.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Teleportation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Map/Scripts/Blocs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/MovePlayerSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Script/RotationNoSmooth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/WIN_OR_LOSE.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Playing.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/WIN.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/End.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/WIN.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <marker date="1528208488000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1528208488000" expanded="true" signature="121:554" ph="{...}" />
+            <marker date="1528208488000" expanded="true" signature="279:330" ph="{...}" />
+            <marker date="1528208488000" expanded="true" signature="349:400" ph="{...}" />
+            <marker date="1528208488000" expanded="true" signature="421:476" ph="{...}" />
+            <marker date="1528208488000" expanded="true" signature="497:552" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/End.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <marker date="1528208489000" expanded="false" signature="6:100" ph="..." />
+            <marker date="1528208489000" expanded="true" signature="134:1154" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="304:685" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="740:1152" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="856:1149" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="887:999" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1030:1143" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/Playing.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding>
+            <marker date="1528208489000" expanded="false" signature="6:146" ph="..." />
+            <marker date="1528208489000" expanded="true" signature="184:1954" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="385:894" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="948:1053" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1027:1048" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1077:1952" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1256:1490" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1517:1728" ph="{...}" />
+            <marker date="1528208489000" expanded="true" signature="1735:1946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Intrus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="91" column="34" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+          <folding>
+            <marker date="1528209059000" expanded="false" signature="7:147" ph="..." />
+            <marker date="1528209059000" expanded="true" signature="179:2543" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="423:1733" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1484:1730" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1611:1663" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1671:1726" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1785:2072" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1854:1973" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="1893:1926" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2010:2068" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2108:2280" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2148:2244" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2301:2322" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2346:2366" ph="{...}" />
+            <marker date="1528209059000" expanded="true" signature="2405:2539" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Quick.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding>
+            <marker date="1528209102000" expanded="false" signature="6:146" ph="..." />
+            <marker date="1528209102000" expanded="true" signature="182:1328" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="300:621" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="676:1104" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="746:871" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="909:1098" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1127:1144" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1170:1324" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1185:1293" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Projet/Assets/Map/Scripts/Teleportation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <marker date="1528209888000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1528209888000" expanded="true" signature="122:485" ph="{...}" />
+            <marker date="1528209888000" expanded="true" signature="226:269" ph="{...}" />
+            <marker date="1528209888000" expanded="true" signature="324:348" ph="{...}" />
+            <marker date="1528209888000" expanded="true" signature="382:483" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/QTE/QTE_Game_Moving_Phantom.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <marker date="1528209102000" expanded="false" signature="6:146" ph="..." />
+            <marker date="1528209102000" expanded="true" signature="192:1594" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="342:754" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="809:1189" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="881:962" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1000:1186" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1212:1229" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1255:1412" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1436:1590" ph="{...}" />
+            <marker date="1528209102000" expanded="true" signature="1451:1559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
