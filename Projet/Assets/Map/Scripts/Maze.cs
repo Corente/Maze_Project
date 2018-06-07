@@ -22,8 +22,6 @@ public class Maze : NetworkBehaviour
 	public GameObject BlocL;
 	public GameObject BlocI;
 
-	
-
 	private int max_artefact = 4;
 
 	public Bloc[,] grid;
@@ -31,22 +29,20 @@ public class Maze : NetworkBehaviour
 
 	private Vector2 _randomCellPos;
 
-	protected GameObject visualBlocInit;
+	private GameObject visualBlocInit;
 
 	public GameObject Postion1;
 	public GameObject Postion2;
 	public GameObject Postion3;
 	public GameObject Postion4;
 
-	public GameObject Variables;
+	
 	private string memoire_ligne;
 	private string memoire_direction;
-	
 	
 	private bool buton;
 
 	private float timer;
-	
 	
 	public GameObject tree;
 	public GameObject statue;

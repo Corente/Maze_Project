@@ -139,6 +139,7 @@
             </e>
           </e>
         </e>
+        <e p="Multi.cs" t="Include" />
         <e p="Player" t="Include">
           <e p="PinwheelFantasyEffectFreePack1" t="Include">
             <e p="README 1.txt" t="Include" />
