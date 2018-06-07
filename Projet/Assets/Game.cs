@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -24,6 +25,7 @@ public class Game : NetworkBehaviour
 	public int ScoreMax;
 
 	public int Timer = 0;
+	private int depart =0;
 
 	private bool bouton = false;
 
@@ -31,6 +33,8 @@ public class Game : NetworkBehaviour
 	private string direction;
 
 	public GameObject Grid;
+
+	
 	
 	
 	
@@ -93,20 +97,38 @@ public class Game : NetworkBehaviour
 
 			if (NombreDeJoueur == 1)
 			{
-				Joueur1.GetComponent<Canvas>().enabled = true;
-				while (!bouton)
+				if (bouton)
 				{
-					//raf
+					bouton = false;
+					ligne = Joueur1.GetComponent<Variables_texte>().GetLigne();
+					direction = Joueur1.GetComponent<Variables_texte>().GetDirection();
+					
+					Grid.GetComponent<Maze>().Bouge(direction,ligne);
+					
+					Joueur1.GetComponent<Canvas>().enabled = true;
+					
+					Joueur1.GetComponent<CameraFollow>().TourVrai();
 				}
-				bouton = false;
-				ligne = Joueur1.GetComponent<Variables_texte>().GetLigne();
-				direction = Joueur1.GetComponent<Variables_texte>().GetDirection();
-					
-				Grid.GetComponent<Maze>().Bouge(direction,ligne);
-					
-				Joueur1.GetComponent<Canvas>().enabled = true;
-					
-				Joueur1.GetComponent<CameraFollow>().TourVrai();
+				else if (depart == 0)
+				{
+					Timer = 30;
+					depart = (int)Time.deltaTime;
+				}
+				else if (Timer > 0)
+				{
+					Joueur1.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
+					Timer = Timer - (depart - (int)Time.deltaTime);
+				}
+				else if (Timer <= 0)
+				{
+					Joueur1.GetComponent<CameraFollow>().TourFalse();
+					TourDuJoueur1 = false;
+					TourDuJoueur2 = true;
+				}
+				else
+				{
+					Joueur1.GetComponent<Canvas>().enabled = true;
+				}
 			}
 			if (NombreDeJoueur == 2)
 			{
@@ -121,49 +143,73 @@ public class Game : NetworkBehaviour
 					 * On Desactive son Canvas
 					 * On lui chnage la cam
 					 */
-					Joueur1.GetComponent<Canvas>().enabled = true;
-					while (!bouton)
+					if (bouton)
 					{
-						//raf
+						bouton = false;
+						ligne = Joueur1.GetComponent<Variables_texte>().GetLigne();
+						direction = Joueur1.GetComponent<Variables_texte>().GetDirection();
+					
+						Grid.GetComponent<Maze>().Bouge(direction,ligne);
+					
+						Joueur1.GetComponent<Canvas>().enabled = true;
+					
+						Joueur1.GetComponent<CameraFollow>().TourVrai();
 					}
-					bouton = false;
-					ligne = Joueur1.GetComponent<Variables_texte>().GetLigne();
-					direction = Joueur1.GetComponent<Variables_texte>().GetDirection();
-					
-					Grid.GetComponent<Maze>().Bouge(direction,ligne);
-					
-					Joueur1.GetComponent<Canvas>().enabled = true;
-					
-					Joueur1.GetComponent<CameraFollow>().TourVrai();
-					
-					
-					
-					
-					//Creer Un timer
-					/*
-					 *while(timer > 0)
-					 *Joueur1.GetComponent<CameraFollow>().TourFaux();
-					 * 
-					 * 
-					 */
-
-					TourDuJoueur1 = false;
-					TourDuJoueur2 = true;
+					else if (depart == 0)
+					{
+						Timer = 30;
+						depart = (int)Time.deltaTime;
+					}
+					else if (Timer > 0)
+					{
+						Joueur1.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
+						Timer = Timer - (depart - (int)Time.deltaTime);
+					}
+					else if (Timer <= 0)
+					{
+						Joueur1.GetComponent<CameraFollow>().TourFalse();
+						TourDuJoueur1 = false;
+						TourDuJoueur2 = true;
+					}
+					else
+					{
+						Joueur1.GetComponent<Canvas>().enabled = true;
+					}
 				}
 				else if (TourDuJoueur2)
 				{
-					//Faire Bouger Les blocs
-					//Creer Un timer
-					Joueur2.GetComponent<CameraFollow>().TourVrai();
+					if (bouton)
+					{
+						bouton = false;
+						ligne = Joueur2.GetComponent<Variables_texte>().GetLigne();
+						direction = Joueur2.GetComponent<Variables_texte>().GetDirection();
 					
-					/*if(timer == fini)
-					 * {
-					 *  	Joueur2.GetComponent<CameraFollow>().TourFaux();
-					 * }
-					 */
-
-					TourDuJoueur2 = false;
-					TourDuJoueur1 = true;
+						Grid.GetComponent<Maze>().Bouge(direction,ligne);
+					
+						Joueur2.GetComponent<Canvas>().enabled = true;
+					
+						Joueur2.GetComponent<CameraFollow>().TourVrai();
+					}
+					else if (depart == 0)
+					{
+						Timer = 30;
+						depart = (int)Time.deltaTime;
+					}
+					else if (Timer > 0)
+					{
+						Joueur2.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
+						Timer = Timer - (depart - (int)Time.deltaTime);
+					}
+					else if (Timer <= 0)
+					{
+						Joueur2.GetComponent<CameraFollow>().TourFalse();
+						TourDuJoueur2 = false;
+						TourDuJoueur1 = true;
+					}
+					else
+					{
+						Joueur2.GetComponent<Canvas>().enabled = true;
+					}
 				}
 			}
 			if (NombreDeJoueur == 3)

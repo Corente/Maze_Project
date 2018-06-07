@@ -144,6 +144,7 @@
             <e p="README 1.txt" t="Include" />
           </e>
           <e p="script" t="Include">
+            <e p="AficheTemps.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
             <e p="CanvasScript.cs" t="Include" />
             <e p="Main_menu.cs" t="Include" />
