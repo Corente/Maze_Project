@@ -7,7 +7,7 @@ public class CameraFollow : NetworkBehaviour
 {
 
 	public Camera Cam;
-	private bool TourDuJoueur;
+	public bool TourDuJoueur;
 
 	
 	

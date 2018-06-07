@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 114115248609097952}
   - component: {fileID: 114880856015855050}
   - component: {fileID: 114664300382449476}
+  - component: {fileID: 114780391561140914}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -381,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1742501677669804
 GameObject:
   m_ObjectHideFlags: 1
@@ -1691,6 +1692,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ligne: {fileID: 114007753798591094}
   direction: {fileID: 114599846105461430}
+--- !u!114 &114780391561140914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517063448091438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ffed431cc13024696664a8ce6cbbba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 223247577926562230}
+  Score: {fileID: 223761630864172532}
 --- !u!114 &114872892320160988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11044,7 +11058,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 20264497905467906}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -11064,7 +11078,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 20264497905467906}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

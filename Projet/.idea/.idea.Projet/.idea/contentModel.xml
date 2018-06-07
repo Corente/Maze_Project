@@ -141,7 +141,6 @@
             </e>
           </e>
         </e>
-        <e p="Multi.cs" t="Include" />
         <e p="Player" t="Include">
           <e p="PinwheelFantasyEffectFreePack1" t="Include">
             <e p="README 1.txt" t="Include" />
@@ -150,6 +149,7 @@
             <e p="AficheTemps.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
             <e p="CanvasScript.cs" t="Include" />
+            <e p="CanvasVisibleJ1.cs" t="Include" />
             <e p="Main_menu.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="Variables_texte.cs" t="Include" />
@@ -175,6 +175,7 @@
           <e p="WIN.cs" t="Include" />
           <e p="Yellow.cs" t="Include" />
         </e>
+        <e p="Test.cs" t="Include" />
         <e p="trap3" t="Include">
           <e p="badfluid@gmail.com.txt" t="Include" />
         </e>
