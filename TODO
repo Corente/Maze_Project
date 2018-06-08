@@ -1,0 +1,33 @@
+TO DO : 
+Q : QTE
+B/M : bonus Malus
+M : Map
+IA : IA (lol)
+MP : Menu principal
+MS : Musique et sons
+A : Artefacts
+
+V : Fait, X : non fait
+
+- V Q pb du canvas : Résolu
+- V Q pb du chiffre random : Résolu
+- V Q pb des images finale : Résolu
+- V Q pb de la fin pr yellow one : Résolu
+- V Q selection du QTE (timer modulo) : enabled les autres
+- V Q Page d’explication QTE :
+- V Q Animation pour pièce pigée :
+- X B/M Téléportation
+- X B/M Implémentation des bonus/malus
+- X M custom blocs
+- X M rapprocher le truc apocalyptique pr qu’on en voit pas les bords
+- X B/M A barre d’inventaire et des bonus en réserve (1 max??) 
+- X B/M mini map (demander à Rayan)
+- X IA (commencer par créer un fichier map de caractères ??)
+- X M Interface de sélection du bloc 
+- X MP canvas de côté sans fond (voir page unity sur canvas et MP)
+- X MP Ajouter le fond apocalyptique
+- X MS Musique et sons dans toutes les scènes
+- V MS bruit des murs qui bougent
+- X A Association artefact aux blocs
+- X A Répartition random Artefacts
+- X A Gérer la chute des artefacts avec blocs
