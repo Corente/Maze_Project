@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
@@ -43,6 +44,11 @@ public class End : MonoBehaviour
 			YOULOSE.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0);
 			finished = true;
 		}		
+		}
+
+		if (finished)
+		{
+			
 		}
 	}
 }

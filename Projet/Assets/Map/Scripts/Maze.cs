@@ -37,9 +37,8 @@ public class Maze : NetworkBehaviour
 	public GameObject Postion4;
 	
 	
-	public GameObject Teleportation_L;
-	public GameObject Teleportation_I;
-	public GameObject Teleportation_T;
+	public GameObject Teleportation_prefab;
+	private bool teleport;
 
 	
 	private string memoire_ligne;
@@ -57,6 +56,9 @@ public class Maze : NetworkBehaviour
 	protected GameObject artefactPlayer2;
 	protected GameObject artefactPlayer3;
 	protected GameObject artefactPlayer4;
+
+	public QTE_trigger QTECollision;
+	public GameObject QTEPrefab;
 	
 	
 	// Use this for initialization
@@ -72,6 +74,8 @@ public class Maze : NetworkBehaviour
 		Postion2.transform.position = grid[0, 8].obj.transform.position + new Vector3(0,3,0);
 		Postion3.transform.position = grid[8, 0].obj.transform.position + new Vector3(0,3,0);
 		Postion4.transform.position = grid[8, 8].obj.transform.position + new Vector3(0,3,0);
+
+		teleport = false;
 	}
 	
 	// Update is called once per frame
@@ -147,7 +151,8 @@ public class Maze : NetworkBehaviour
 			}
 		}
 		InitVisual();
-		
+		Teleportation();
+		//QTE();
 	}
 
 	
@@ -157,7 +162,7 @@ public class Maze : NetworkBehaviour
 		
 		for (int p = 0; p < grid.GetLength(0); p++)
 		{
-			for (int w = 0; w < grid.GetLongLength(1); w++)
+			for (int w = 0; w < grid.GetLength(1); w++)
 			{
 				Bloc bloc = grid[p, w];
 				GameObject visualprefabbloc;
@@ -239,11 +244,14 @@ public class Maze : NetworkBehaviour
 						visualprefabbloc = BlocT;
 						bloc.type = "T";
 					}
-				
+					
+					//TELEPORTATION
+					
 				
 					visualBlocInit = Instantiate(visualprefabbloc, new Vector3(bloc.xpos * 20, 0, (height - bloc.zpos)* 20), Quaternion.identity) as GameObject;
-				
-				
+					
+					
+					
 					int t = 0;
 					while (t<bloc.rotate)
 					{
@@ -262,6 +270,56 @@ public class Maze : NetworkBehaviour
 			}
 		}
 	}
+
+	void Teleportation()
+	{
+			int i = 3;	
+			while (!teleport && i < height - 3)
+			{
+				int j = 3;	
+				while (!teleport && j < width - 3)
+				{
+					int rdn = Random.Range(0, 3);
+
+					if (rdn == 2 && grid[i, j].AMB == null)
+					{
+						
+						
+						grid[i, j].AMB = Instantiate(Teleportation_prefab, new Vector3(grid[i, j].xpos * 20, 5, (height - grid[i, j].zpos) * 20),
+							Quaternion.identity);
+						teleport = true;
+					}
+					j++;
+				}
+				i++;
+			}
+
+	}
+	
+	void QTE()
+	{
+		int i = 1;	
+		while (i < height - 1)
+		{
+			int j = 1;	
+			while (j < width - 1)
+			{
+				int rdn = 3;// Random.Range(0, 4);
+				if (rdn == 3 && grid[i, j].AMB == null)
+				{
+					grid[i, j].AMB = Instantiate(QTEPrefab, new Vector3(grid[i, j].xpos * 20, 5, (height - grid[i, j].zpos) * 20), Quaternion.identity);
+					QTECollision.Posx = i;
+					QTECollision.Posz = j;
+					QTECollision.Cube = QTEPrefab;
+					
+				}
+				j++;
+			}
+			i++;
+		}
+
+	}
+
 	
 	
 //#############################################################################################################################################################################################

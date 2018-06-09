@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mapping.unity
     guid: ee9a2aa4fd09845cfb1d3206411ad419
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/QTE/TestQTE.unity
+    guid: 499ba03b15f7b422a83c410a7ba4f466
