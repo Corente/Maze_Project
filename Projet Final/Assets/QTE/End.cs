@@ -17,8 +17,6 @@ public class End : MonoBehaviour
 
 	private Collider player;
 
-	private NetworkManager net;
-
 	public Playing starter;
 	// Use this for initialization
 	void Start ()
@@ -28,6 +26,7 @@ public class End : MonoBehaviour
 		game1 = game1.GetComponent<WIN>();
 		game2 = game2.GetComponent<WIN>();
 		game3 = game3.GetComponent<WIN>();
+	
 		QTE = false;
 	}
 	

@@ -23,11 +23,9 @@ public class QTE_trigger : MonoBehaviour
 	private void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Player"))
 		{
-			other.GetComponentInParent<Camera>().enabled = false;
+			other.GetComponentInParent<Player>().GetComponentInChildren<Camera>().enabled = false;
 			cam.enabled = true;
-			camMove.isQTE = true;
-			
-			
+			camMove.isQTE = true;	
 		}
 		
 		
