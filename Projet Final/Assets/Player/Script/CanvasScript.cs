@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Networking;
 
 public class CanvasScript : NetworkBehaviour 
@@ -18,5 +19,13 @@ public class CanvasScript : NetworkBehaviour
 		}
 	}
 
+	void Update()
+	{
+		if (!isLocalPlayer)
+		{
+			canvas.enabled = false;
+			Score.enabled = false;
+		}
+	}
 	
 }

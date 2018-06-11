@@ -21,4 +21,14 @@ public class CanvasVisibleJ1 : NetworkBehaviour
 			Ready.enabled = false;
 		}
 	}
+	
+	void Update() 
+	{
+		if (!isLocalPlayer)
+		{
+			canvas.enabled = false;
+			Score.enabled = false;
+			Ready.enabled = false;
+		}
+	}
 }

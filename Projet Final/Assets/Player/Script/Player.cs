@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+public class Player : NetworkBehaviour 
+{
 
 	public bool hasToMoveU;
 	public bool hasToMoveD;
@@ -25,80 +27,90 @@ public class Player : MonoBehaviour {
 		_objects = objects;
 	}
 
-	void Start () {
-		hasToMoveU = false;
-		hasToMoveD = false;
-		hasToMoveL = false;
-		hasToMoveR = false;
-		i = 0;
-		_objects = new List<string>();
-		_score = 0;
-		toPrint.text = "Score : " + "0";
-		youWin.text = "";
-		bonustemps = 0;
+	void Start () 
+	{
+		if (isLocalPlayer)
+		{
+			hasToMoveU = false;
+			hasToMoveD = false;
+			hasToMoveL = false;
+			hasToMoveR = false;
+			i = 0;
+			_objects = new List<string>();
+			_score = 0;
+			toPrint.text = "Score : " + "0";
+			youWin.text = "";
+			bonustemps = 0;
+		}
+		
+		
 	}
 	
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
+		if (isLocalPlayer)
 		{
-			if (i % 20 < 10)
+			if (Input.GetKeyDown(KeyCode.UpArrow) || hasToMoveU)
 			{
-				transform.Translate(0, 0.02f, 0);
-			}
-			else
-			{
-				transform.Translate(0,-0.02f,0);
-			}
+				if (i % 20 < 10)
+				{
+					transform.Translate(0, 0.02f, 0);
+				}
+				else
+				{
+					transform.Translate(0,-0.02f,0);
+				}
 			
 			
 			
-			transform.Translate(0, 0, 0.2f);
-			i += 1;
-			hasToMoveU = true;
-			if ( i == 100)
-			{
-				hasToMoveU = false;
-				i = 0;
+				transform.Translate(0, 0, 0.2f);
+				i += 1;
+				hasToMoveU = true;
+				if ( i == 100)
+				{
+					hasToMoveU = false;
+					i = 0;
+				}
 			}
-		}
-		else if (Input.GetKeyDown(KeyCode.DownArrow) || hasToMoveD)
-		{
-			transform.Rotate(0, 5f, 0);
-			i += 5;
-			hasToMoveD = true;
-			if ( i == 180)
+			else if (Input.GetKeyDown(KeyCode.DownArrow) || hasToMoveD)
 			{
-				hasToMoveD = false;
-				i = 0;
+				transform.Rotate(0, 5f, 0);
+				i += 5;
+				hasToMoveD = true;
+				if ( i == 180)
+				{
+					hasToMoveD = false;
+					i = 0;
+				}
 			}
-		}
-		else if (Input.GetKeyDown(KeyCode.LeftArrow) || hasToMoveL)
-		{
-			transform.Rotate(0, -5f, 0);
-			i += 5;
-			hasToMoveL = true;
-			if ( i == 90)
+			else if (Input.GetKeyDown(KeyCode.LeftArrow) || hasToMoveL)
 			{
-				hasToMoveL = false;
-				i = 0;
+				transform.Rotate(0, -5f, 0);
+				i += 5;
+				hasToMoveL = true;
+				if ( i == 90)
+				{
+					hasToMoveL = false;
+					i = 0;
+				}
 			}
-		}
-		else if (Input.GetKeyDown(KeyCode.RightArrow) || hasToMoveR)
-		{
-			transform.Rotate(0, 5f, 0);
-			i += 5;
-			hasToMoveR = true;
-			if ( i == 90)
+			else if (Input.GetKeyDown(KeyCode.RightArrow) || hasToMoveR)
 			{
-				hasToMoveR = false;
-				i = 0;
+				transform.Rotate(0, 5f, 0);
+				i += 5;
+				hasToMoveR = true;
+				if ( i == 90)
+				{
+					hasToMoveR = false;
+					i = 0;
+				}
 			}
+			_score = Score();
+			toPrint.text = "Score : " + _score.ToString();
+			YouWin();
+			bonustemps = GameObject.Find("MB").GetComponent<MalusBonus>().bonusTemps;
 		}
-		_score = Score();
-		toPrint.text = "Score : " + _score.ToString();
-		YouWin();
-		bonustemps = GameObject.Find("MB").GetComponent<MalusBonus>().bonusTemps;
+		
 	}
 	
 	private void OnTriggerEnter(Collider other)

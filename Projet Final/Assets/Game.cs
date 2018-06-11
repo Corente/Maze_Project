@@ -24,8 +24,8 @@ public class Game : MonoBehaviour
 
 	public int ScoreMax;
 
-	public int Timer = 0;
-	private int depart = 0;
+	public float Timer = 0;
+	private bool depart = false;
 
 	private bool bouton = false;
 
@@ -98,7 +98,6 @@ public class Game : MonoBehaviour
 					}
 					else if (Joueur1.GetComponent<Variables_texte>().ok)
 					{
-						Debug.Log("bugger");
 						bouton = false;
 						ligne = Joueur1.GetComponent<Variables_texte>().GetLigne();
 						direction = Joueur1.GetComponent<Variables_texte>().GetDirection();
@@ -111,21 +110,78 @@ public class Game : MonoBehaviour
 						Joueur1.GetComponent<Variables_texte>().ok = false;
 						vasi = true;
 					}
-					else if (depart == 0 && vasi)
+					else if (!depart && vasi)
 					{
 						Timer = 30;
-						depart = (int) Time.deltaTime;
+						depart = true;
+						Joueur1.GetComponent<AficheTemps>().ActiveCanvas();
+					}
+					else if (Timer > 0 && vasi)
+					{
+						Timer = Timer - Time.deltaTime;
+						Joueur1.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
+						Debug.Log(Timer);
+					}
+					else if (Timer <= 0 && vasi)
+					{
+						Debug.Log("Test");
+						Joueur1.GetComponent<AficheTemps>().DesactiveCanavs();
+						Joueur1.GetComponent<CameraFollow>().TourFalse();
+						depart = false;
+						vasi = false;
+						TourDuJoueur1 = false;
+						Timer = 30;
+					}
+					else
+					{
+						Joueur1.GetComponentsInChildren<Canvas>()[0].enabled = true;
+					}
+				}
+				else
+				{
+					TourDuJoueur1 = true;
+				}
+			}
+			else if (NombreDeJoueur == 2)
+			{
+				/*if (TourDuJoueur1)
+				{
+					if (Joueur1.GetComponent<Player>().Score() >= ScoreMax)
+					{
+						debut = false;
+					}
+					else if (Joueur1.GetComponent<Variables_texte>().ok)
+					{
+						Debug.Log("bugger");
+						bouton = false;
+						ligne = Joueur2.GetComponent<Variables_texte>().GetLigne();
+						direction = Joueur2.GetComponent<Variables_texte>().GetDirection();
+					
+						Grid.GetComponent<Maze>().Bouge(direction, ligne);
+
+						Joueur2.GetComponentsInChildren<Canvas>()[0].enabled = false;
+
+						Joueur2.GetComponent<CameraFollow>().TourVrai();
+						Joueur2.GetComponent<Variables_texte>().ok = false;
+						vasi = true;
+					}
+					else if (!depart && vasi)
+					{
+						Timer = 30;
+						depart = true;
 						Joueur1.GetComponent<AficheTemps>().ActiveCanvas();
 					}
 					else if (Timer > 0 && vasi)
 					{
 						Joueur1.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
-						Timer = Timer - (depart - (int) Time.deltaTime);
+						Timer -= (int)Time.deltaTime;
+						Debug.Log(Timer);
 					}
 					else if (Timer <= 0 && vasi)
 					{
 						Joueur1.GetComponent<AficheTemps>().DesactiveCanavs();
 						Joueur1.GetComponent<CameraFollow>().TourFalse();
+						depart = false;
 						vasi = false;
 						TourDuJoueur1 = false;
 						TourDuJoueur2 = true;
@@ -136,67 +192,19 @@ public class Game : MonoBehaviour
 						Joueur1.GetComponentsInChildren<Canvas>()[0].enabled = true;
 					}
 				}
-			}
-			else if (NombreDeJoueur == 2)
-			{
-				if (Joueur2.GetComponent<Player>().Score() >= ScoreMax)
+				else if (TourDuJoueur2)
 				{
-					debut = false;
-				}
-				else if (Joueur2.GetComponent<Variables_texte>().ok)
-				{
-					Debug.Log("bugger");
-					bouton = false;
-					ligne = Joueur2.GetComponent<Variables_texte>().GetLigne();
-					direction = Joueur2.GetComponent<Variables_texte>().GetDirection();
-					
-					Grid.GetComponent<Maze>().Bouge(direction, ligne);
-
-					Joueur2.GetComponentsInChildren<Canvas>()[0].enabled = false;
-
-					Joueur2.GetComponent<CameraFollow>().TourVrai();
-					Joueur2.GetComponent<Variables_texte>().ok = false;
-					vasi = true;
-				}
-				else if (depart == 0 && vasi)
-				{
-					Timer = 30;
-					depart = (int) Time.deltaTime;
-					Joueur2.GetComponent<AficheTemps>().ActiveCanvas();
-				}
-				else if (Timer > 0 && vasi)
-				{
-					Joueur2.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
-					Timer = Timer - (depart - (int) Time.deltaTime);
-				}
-				else if (Timer <= 0 && vasi)
-				{
-					Joueur2.GetComponent<AficheTemps>().DesactiveCanavs();
-					Joueur2.GetComponent<CameraFollow>().TourFalse();
-					vasi = false;
-					TourDuJoueur2 = false;
-					TourDuJoueur1 = true;
-				}
-				else
-				{
-					Debug.Log("Affiche toi");
-					Joueur2.GetComponentsInChildren<Canvas>()[0].enabled = true;
-				}
-			}
-			else if (TourDuJoueur2)
-			{
 					if (Joueur2.GetComponent<Player>().Score() >= ScoreMax)
 					{
 						debut = false;
 					}
 					else if (Joueur2.GetComponent<Variables_texte>().ok)
 					{
+						Debug.Log("bugger");
 						bouton = false;
 						ligne = Joueur2.GetComponent<Variables_texte>().GetLigne();
 						direction = Joueur2.GetComponent<Variables_texte>().GetDirection();
-						Debug.Log(ligne);
-						Debug.Log(direction);
-
+					
 						Grid.GetComponent<Maze>().Bouge(direction, ligne);
 
 						Joueur2.GetComponentsInChildren<Canvas>()[0].enabled = false;
@@ -205,29 +213,51 @@ public class Game : MonoBehaviour
 						Joueur2.GetComponent<Variables_texte>().ok = false;
 						vasi = true;
 					}
-					else if (depart == 0 && vasi)
+					else if (!depart && vasi)
 					{
 						Timer = 30;
-						depart = (int) Time.deltaTime;
+						depart = true;
+						Joueur2.GetComponent<AficheTemps>().ActiveCanvas();
 					}
 					else if (Timer > 0 && vasi)
 					{
 						Joueur2.GetComponent<AficheTemps>().MettreTemps(Timer.ToString());
-						Timer = Timer - (depart - (int) Time.deltaTime);
+						Timer -= (int)Time.deltaTime;
+						Debug.Log(Timer);
 					}
 					else if (Timer <= 0 && vasi)
 					{
+						Joueur2.GetComponent<AficheTemps>().DesactiveCanavs();
 						Joueur2.GetComponent<CameraFollow>().TourFalse();
+						depart = false;
 						vasi = false;
-						TourDuJoueur1 = false;
-						TourDuJoueur2 = true;
+						TourDuJoueur2 = false;
+						TourDuJoueur1 = true;
 					}
 					else
 					{
 						Debug.Log("Affiche toi");
 						Joueur2.GetComponentsInChildren<Canvas>()[0].enabled = true;
 					}
-		  	     }
+				}*/
+				
+				if (Joueur1.GetComponent<Player>().Score() >= ScoreMax)
+				{
+					debut = false;
+				}
+				else if (Joueur2.GetComponent<Player>().Score() >= ScoreMax)
+				{
+					debut = false;
+				}
+				
+				Joueur1.GetComponent<CameraFollow>().TourVrai();
+				Joueur2.GetComponent<CameraFollow>().TourVrai();
+				Joueur1.GetComponent<AficheTemps>().ActiveCanvas();
+				Joueur2.GetComponent<AficheTemps>().ActiveCanvas();
+				
+				
+			}
+			
 			}
 			else if (NombreDeJoueur == 3)
 			{
